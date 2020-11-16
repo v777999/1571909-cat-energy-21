@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html class="page" lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <title>HTML Academy: Кэт энерджи</title>
+</head>
+
+<body class="page__body">
+  <header class="page-header">
+    <a class="page-header__logo" href="index.html">
+      <img src="img/logotype-name-mobile.svg" width="101" height="18" alt="Логотип Кэт энерджи">
+    </a>
+    <button class="main-nav__toggle" type="button">Открыть меню</button>
+    <nav class="main-nav">
+      <a href="index.html">Главная</a>
+      <a href="catalog.html">Каталог продукции</a>
+      <a href="form.html">Подбор программы</a>
+    </nav>
+  </header>
+
+  <main class="page-main">
+    <h1 class="page-title">Подбор программы</h1>
+    <section class="form-request">
+      <div class="form-request__wrapper">
+        <h2 class="form__title">Заполните анкету, и мы подберем программу питания для вашего кота</h2>
+        <form class="form__filter" method="GET" action="https://echo.htmlacademy.ru">
+          <fieldset class="filter__client">
+            <legend class="visually-hidden">Информация о коте</legend>
+            <label class="filter__client-label" for="name">Имя:*<input class="filter__client-input" id="client-name"
+                type="text" placeholder="Барсик" required>
+            </label>
+            <label class="filter__client-label" for="client-weight">Вес(кг):*<input class="filter__client-input"
+                id="client-weight" type="text" placeholder="7" required>
+            </label>
+            <label class="filter__client-label" for="client-age">Возраст(лет):<input class="filter__client-input"
+                id="client-age" type="text" placeholder="7">
+            </label>
+          </fieldset>
+          <fieldset class="filter__target">
+            <legend class="visually-hidden">Цели программы</legend>
+            <ul class="filter__target-list">
+              <li class="filter__target-item filter__radio">
+                <label class="filter__target-label filter__target-label--active" for="slim-target">Похудение<input
+                    class="visually-hidden filter__target-input" type="radio" name="target-group" id="slim-target"
+                    checked></label>
+              </li>
+              <li class="filter__target-item filter__radio">
+                <label class="filter__target-label" for="weight-target">Набор массы<input
+                    class="visually-hidden filter__target-input" type="radio" name="target-group" id="weight-target">
+                </label>
+              </li>
+              <li class="filter__target-item filter__radio">
+                <label class="filter__target-label" for="unknown-target">Не знаю (Нужен ваш совет)<input
+                    class="visually-hidden filter__target-input" type="radio" name="target-group" id="unknown-target">
+                </label>
+              </li>
+            </ul>
+          </fieldset>
+          <fieldset class="filter__contacts">
+            <legend class="filter__contacts-legend">Контактные данные(владельца кота)</legend>
+            <ul class="filter__contacts-list">
+              <li class="filter__contacts-item">
+                <label class="filter__contacts-label filter__contacts-label--active" for="email-field">E-maile:*<input
+                    type="email" id="email-field" placeholder="kuklachev@gmail.com" required></label>
+              </li>
+              <li class="filter__contacts-item">
+                <label class="filter__contacts-label" for="phone-field">Телефон:*<input type="tel" id="phone-field"
+                    placeholder="8 (960) 900-60-90" required></label>
+              </li>
+            </ul>
+          </fieldset>
+          <fieldset class="filter__comment">
+            <legend class="filter__comment-legend">Комментарий</legend>
+            <textarea class="comment__text" name="comment" id="comment-field" cols="34" rows="7"
+              placeholder="Расскажите обо всех повадках кота"></textarea>
+          </fieldset>
+          <fieldset class="filter__extra">
+            <legend class="filter__extra-legend">Дополнительно</legend>
+            <ul class="filter__extra-list">
+              <li class="filter__extra-item filter__extra-checkbox">
+                <input class="visually-hidden filter__extra-input" id="sweetener-field" type="checkbox" checked>
+                <label class="filter__extra-label filter__extra-label--active" for="sweetener-field">Cахарозаменитель</label>
+              </li>
+              <li class="filter__extra-item filter__extra-checkbox">
+                <input class="visually-hidden filter__extra-input" id="water-field" type="checkbox">
+                <label class="filter__extra-label" for="water-field">Питьевая вода</label>
+              </li>
+              <li class="filter__extra-item filter__extra-checkbox">
+                <input class="visually-hidden filter__extra-input" id="milk-field" type="checkbox">
+                <label class="filter__extra-label" for="milk-field">Молоко</label>
+              </li>
+              <li class="filter__extra-item filter__extra-checkbox">
+                <input class="visually-hidden filter__add-input" id="vitamins-field" type="checkbox">
+                <label class="filter__extra-label" for="vitamins-field">Витамины</label>
+              </li>
+            </ul>
+          </fieldset>
+          <button class="form__request-button" type="submit">Отправить заявку</button>
+          <p class="form__request-legend">* — Обязательные поля</p>
+        </form>
+      </div>
+    </section>
+
+    <footer class="page-footer">
+      <div class="page-footer__wrapper">
+        <a class="page-header__logo-name">
+          <img src="img/logotype-name-mobile.svg" width="101" height="18" alt="Кэт энерджи">
+        </a>
+        <div class="page-footer__social social">
+          <a class="social__link social__link--vkontakte" href="https://vk.com/htmlacademy">Мы в Вконтакте</a>
+          <a class="social__link social__link--instagram" href="https://www.instagram.com/htmlacademy">Мы в
+            Инстаграме</a>
+          <a class="social__link social__link--facebook" href="https://www.facebook.com/htmlacademy">Мы в Фейсбуке</a>
+        </div>
+        <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive"
+          aria-label="Перейти на сайт HTML Academy">HTML Academy<img src="img/logo-academy.svg"
+            alt="Логотип HTML Academy" width="27" height="34"></a>
+      </div>
+    </footer>
+</body>
+
+</html>

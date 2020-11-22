@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html class="page" lang="ru">
 
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>HTML Academy: Кэт энерджи</title>
-    <link href="css/style.css" rel="stylesheet">
-  </head>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>HTML Academy: Кэт энерджи</title>
+  <link href="css/style.css" rel="stylesheet">
+</head>
 
 <body class="page__body">
   <header class="page-header">
@@ -29,16 +29,21 @@
         <h2 class="form__title">Заполните анкету, и мы подберем программу питания для вашего кота</h2>
         <form class="form__filter" method="GET" action="https://echo.htmlacademy.ru">
           <fieldset class="filter__client">
-            <legend class="visually-hidden">Информация о коте</legend>
-            <label class="filter__client-label" for="name">Имя:*<input class="filter__client-input" id="client-name"
-                type="text" placeholder="Барсик" required>
-            </label>
-            <label class="filter__client-label" for="client-weight">Вес(кг):*<input class="filter__client-input"
-                id="client-weight" type="text" placeholder="7" required>
-            </label>
-            <label class="filter__client-label" for="client-age">Возраст(лет):<input class="filter__client-input"
-                id="client-age" type="text" placeholder="7">
-            </label>
+            <ul class="filter__client-list">
+              <legend class="visually-hidden">Информация о коте</legend>
+              <li class="filter__client-item">
+                <label class="filter__client-label" for="name">Имя:*</label>
+                <input class="filter__client-input" id="client-name" type="text" placeholder="Барсик" required>
+              </li>
+              <li class="filter__client-item">
+                <label class="filter__client-label" for="client-weight">Вес(кг):*</label>
+                <input class="filter__client-input" id="client-weight" type="text" placeholder="7" required>
+              </li>
+              <li class="filter__client-item">
+                <label class="filter__client-label" for="client-age">Возраст(лет):</label>
+                <input class="filter__client-input" id="client-age" type="text" placeholder="7">
+              </li>
+            </ul>
           </fieldset>
           <fieldset class="filter__target">
             <legend class="visually-hidden">Цели программы</legend>
@@ -58,29 +63,32 @@
             </ul>
           </fieldset>
           <fieldset class="filter__contacts">
-            <legend class="filter__contacts-legend">Контактные данные(владельца кота)</legend>
+            <legend class="filter__contacts-legend">Контактные данные (владельца кота)</legend>
             <ul class="filter__contacts-list">
               <li class="filter__contacts-item">
-                <label class="filter__contacts-label filter__contacts-label--active" for="email-field">E-mail:*<input
-                    type="email" id="email-field" placeholder="kuklachev@gmail.com" required></label>
+                <label class="filter__contacts-label filter__contacts-label--active" for="email-field">E-mail:*</label>
+                <input class="filter__contacts-email" type="email" id="email-field" placeholder="kuklachev@gmail.com" required>
               </li>
               <li class="filter__contacts-item">
-                <label class="filter__contacts-label" for="phone-field">Телефон:*<input type="tel" id="phone-field"
-                    placeholder="8 (960) 900-60-90" required></label>
+                <label class="filter__contacts-label" for="phone-field">Телефон:* </label>
+                <input class="filter__contacts-tel" type="tel" id="phone-field" placeholder="8 (960) 900-60-90" required>
               </li>
             </ul>
           </fieldset>
           <fieldset class="filter__comment">
             <legend class="filter__comment-legend">Комментарий</legend>
-            <textarea class="comment__text" name="comment" id="comment-field" cols="30" rows="7"
-              placeholder="Расскажите обо всех повадках кота"></textarea>
+            <div class="filter__comment-wrapper">
+              <textarea class="filter__comment-text" name="comment" id="comment-field" rows="7"
+                placeholder="Расскажите обо всех повадках кота"></textarea>
+            </div>
           </fieldset>
           <fieldset class="filter__extra">
             <legend class="filter__extra-legend">Дополнительно</legend>
             <ul class="filter__extra-list">
               <li class="filter__extra-item filter__extra-checkbox">
                 <input class="filter__extra-input" id="sweetener-field" type="checkbox" checked>
-                <label class="filter__extra-label filter__extra-label--active" for="sweetener-field">Cахарозаменитель</label>
+                <label class="filter__extra-label filter__extra-label--active"
+                  for="sweetener-field">Cахарозаменитель</label>
               </li>
               <li class="filter__extra-item filter__extra-checkbox">
                 <input class="filter__extra-input" id="water-field" type="checkbox">
@@ -96,7 +104,9 @@
               </li>
             </ul>
           </fieldset>
-          <button class="form__request-button" type="submit">Отправить заявку</button>
+          <div class="form__request-button-wrapper">
+            <button class="form__request-button" type="submit">Отправить заявку</button>
+          </div>
           <p class="form__request-legend">* — Обязательные поля</p>
         </form>
       </div>

@@ -3,7 +3,9 @@
 
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>HTML Academy: Кэт энерджи</title>
+  <link href="css/style.css" rel="stylesheet">
 </head>
 
 <body class="page__body">
@@ -22,12 +24,14 @@
   <main class="page-main">
 
     <section class="promo">
-      <h1 class="promo__header-title">Функциональное питание для котов</h1>
-      <p class="stats__slogan">Занялся собой? Займись котом!</p>
-      <a class="promo__header-image">
-        <img src="img/index-can-mobile-1.png" width="280" height="270" alt="Cat Energy Pro Курица">
-      </a>
-      <a class="promo__header-button" href="form.html">Подобрать программу</a>
+      <div class="promo__wrapper">
+        <h1 class="promo__header-title">Функциональное питание для котов</h1>
+        <p class="promo__header-slogan">Занялся собой? Займись котом!</p>
+        <a class="promo__header-image">
+          <img src="img/index-can-mobile-1.png" width="280" height="270" alt="Cat Energy Pro Курица">
+        </a>
+        <a class="promo__header-button" href="form.html">Подобрать программу</a>
+      </div>
     </section>
 
     <section class="programs">
@@ -78,38 +82,38 @@
         <ul class="example__data">
           <li class="example__item">
             <p class="example__value">5 кг</p>
-            <p class="example__legend">Снижение веса</p>
+            <p class="example__legend">Снижение<br>веса</p>
           </li>
           <li class="example__item">
             <p class="example__value">60 дней</p>
-            <p class="example__legend">Затрачено времени</p>
+            <p class="example__legend">Затрачено<br>времени</p>
           </li>
         </ul>
         <p class="example__price">Затраты на питание: 15 000 руб.</p>
         <div class="example__slider">
           <img class="example__image" src="img/before-mobile-1.png" width="311" height="232" alt="Кот до похудения">
-          <img class="example__image" src="img/after-mobile-1.png" width="251" height="240" alt="Кот после похудения">
-          <p class="example__toggles">
-            <button class="slider__toggle slider__toggle--current" type="button">Было</button>
-            <button class="slider__toggle" type="button">Стало</button>
+          <img class="example__image visually-hidden" src="img/after-mobile-1.png" width="251" height="240"
+            alt="Кот после похудения">
+          <p class="example__slider-toggles">
+            <button class="example__slider-toggle example__slider-toggle--current" type="button">Было</button>
+            <button class="example__slider-toggle" type="button">Стало</button>
           </p>
         </div>
-      </div>
-    </section>
-
-    <section class="invitation">
-      <div class="invitation__wrapper">
-        <h2 class="invitation__title">Приглашаем к сотрудничеству дилеров!</h2>
-        <p class="invitation__address">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
-        <div class="invitation__map "></div>
       </div>
     </section>
   </main>
 
   <footer class="page-footer">
+    <section class="invitation">
+      <div class="invitation__wrapper">
+        <h2 class="invitation__title">Приглашаем<br>к сотрудничеству дилеров!</h2>
+        <p class="invitation__address">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
+      </div>
+      <div class="invitation__map"></div>
+    </section>
     <div class="page-footer__wrapper">
-      <a class="page-header__logo-name">
-        <img src="img/logotype-name-mobile.svg" width="101" height="18" alt="Кэт энерджи">
+      <a class="page-footer__logo-name">
+        <img src="img/logotype-name-mobile.svg" width="128" height="24" alt="Кэт энерджи">
       </a>
       <div class="page-footer__social social">
         <a class="social__link social__link--vkontakte" href="https://vk.com/htmlacademy">Мы в Вконтакте</a>
@@ -117,9 +121,9 @@
           Инстаграме</a>
         <a class="social__link social__link--facebook" href="https://www.facebook.com/htmlacademy">Мы в Фейсбуке</a>
       </div>
-      <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive"
-        aria-label="Перейти на сайт HTML Academy">HTML Academy<img src="img/logo-academy.svg" alt="Логотип HTML Academy"
-          width="27" height="34">
+      <a class="page-footer__copyright" href="https://htmlacademy.ru/intensive/adaptive" target="_blank">
+        <span class="copyright__text">HTML Academy</span>
+        <img class="copyright__logo" src="img/logo-academy.svg" width="27" height="34" alt="Логотип HTML Academy">
       </a>
     </div>
   </footer>

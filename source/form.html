@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html class="page" lang="ru">
 
-<head>
-  <meta charset="utf-8">
-  <title>HTML Academy: Кэт энерджи</title>
-</head>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>HTML Academy: Кэт энерджи</title>
+    <link href="css/style.css" rel="stylesheet">
+  </head>
 
 <body class="page__body">
   <header class="page-header">
@@ -20,9 +22,10 @@
   </header>
 
   <main class="page-main">
-    <h1 class="page-title">Подбор программы</h1>
+
     <section class="form-request">
       <div class="form-request__wrapper">
+        <h1 class="page-title">Подбор программы</h1>
         <h2 class="form__title">Заполните анкету, и мы подберем программу питания для вашего кота</h2>
         <form class="form__filter" method="GET" action="https://echo.htmlacademy.ru">
           <fieldset class="filter__client">
@@ -41,19 +44,16 @@
             <legend class="visually-hidden">Цели программы</legend>
             <ul class="filter__target-list">
               <li class="filter__target-item filter__radio">
-                <label class="filter__target-label filter__target-label--active" for="slim-target">Похудение<input
-                    class="visually-hidden filter__target-input" type="radio" name="target-group" id="slim-target"
-                    checked></label>
+                <input class="filter__target-input" type="radio" name="target-group" id="slim-target" checked>
+                <label class="filter__target-label filter__target-label--active" for="slim-target">Похудение</label>
               </li>
               <li class="filter__target-item filter__radio">
-                <label class="filter__target-label" for="weight-target">Набор массы<input
-                    class="visually-hidden filter__target-input" type="radio" name="target-group" id="weight-target">
-                </label>
+                <input class="filter__target-input" type="radio" name="target-group" id="weight-target">
+                <label class="filter__target-label" for="weight-target">Набор массы</label>
               </li>
               <li class="filter__target-item filter__radio">
-                <label class="filter__target-label" for="unknown-target">Не знаю (Нужен ваш совет)<input
-                    class="visually-hidden filter__target-input" type="radio" name="target-group" id="unknown-target">
-                </label>
+                <input class="filter__target-input" type="radio" name="target-group" id="unknown-target">
+                <label class="filter__target-label" for="unknown-target">Не знаю (Нужен ваш совет)</label>
               </li>
             </ul>
           </fieldset>
@@ -61,7 +61,7 @@
             <legend class="filter__contacts-legend">Контактные данные(владельца кота)</legend>
             <ul class="filter__contacts-list">
               <li class="filter__contacts-item">
-                <label class="filter__contacts-label filter__contacts-label--active" for="email-field">E-maile:*<input
+                <label class="filter__contacts-label filter__contacts-label--active" for="email-field">E-mail:*<input
                     type="email" id="email-field" placeholder="kuklachev@gmail.com" required></label>
               </li>
               <li class="filter__contacts-item">
@@ -72,26 +72,26 @@
           </fieldset>
           <fieldset class="filter__comment">
             <legend class="filter__comment-legend">Комментарий</legend>
-            <textarea class="comment__text" name="comment" id="comment-field" cols="34" rows="7"
+            <textarea class="comment__text" name="comment" id="comment-field" cols="30" rows="7"
               placeholder="Расскажите обо всех повадках кота"></textarea>
           </fieldset>
           <fieldset class="filter__extra">
             <legend class="filter__extra-legend">Дополнительно</legend>
             <ul class="filter__extra-list">
               <li class="filter__extra-item filter__extra-checkbox">
-                <input class="visually-hidden filter__extra-input" id="sweetener-field" type="checkbox" checked>
+                <input class="filter__extra-input" id="sweetener-field" type="checkbox" checked>
                 <label class="filter__extra-label filter__extra-label--active" for="sweetener-field">Cахарозаменитель</label>
               </li>
               <li class="filter__extra-item filter__extra-checkbox">
-                <input class="visually-hidden filter__extra-input" id="water-field" type="checkbox">
+                <input class="filter__extra-input" id="water-field" type="checkbox">
                 <label class="filter__extra-label" for="water-field">Питьевая вода</label>
               </li>
               <li class="filter__extra-item filter__extra-checkbox">
-                <input class="visually-hidden filter__extra-input" id="milk-field" type="checkbox">
+                <input class="filter__extra-input" id="milk-field" type="checkbox">
                 <label class="filter__extra-label" for="milk-field">Молоко</label>
               </li>
               <li class="filter__extra-item filter__extra-checkbox">
-                <input class="visually-hidden filter__add-input" id="vitamins-field" type="checkbox">
+                <input class="filter__add-input" id="vitamins-field" type="checkbox">
                 <label class="filter__extra-label" for="vitamins-field">Витамины</label>
               </li>
             </ul>
@@ -103,9 +103,16 @@
     </section>
 
     <footer class="page-footer">
+      <section class="invitation">
+        <div class="invitation__wrapper invitation__wrapper--grey">
+          <h2 class="invitation__title">Приглашаем<br>к сотрудничеству дилеров!</h2>
+          <p class="invitation__address">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
+        </div>
+        <div class="invitation__map"></div>
+      </section>
       <div class="page-footer__wrapper">
-        <a class="page-header__logo-name">
-          <img src="img/logotype-name-mobile.svg" width="101" height="18" alt="Кэт энерджи">
+        <a class="page-footer__logo-name">
+          <img src="img/logotype-name-mobile.svg" width="128" height="24" alt="Кэт энерджи">
         </a>
         <div class="page-footer__social social">
           <a class="social__link social__link--vkontakte" href="https://vk.com/htmlacademy">Мы в Вконтакте</a>
@@ -113,9 +120,10 @@
             Инстаграме</a>
           <a class="social__link social__link--facebook" href="https://www.facebook.com/htmlacademy">Мы в Фейсбуке</a>
         </div>
-        <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive"
-          aria-label="Перейти на сайт HTML Academy">HTML Academy<img src="img/logo-academy.svg"
-            alt="Логотип HTML Academy" width="27" height="34"></a>
+        <a class="page-footer__copyright" href="https://htmlacademy.ru/intensive/adaptive" target="_blank">
+          <span class="copyright__text">HTML Academy</span>
+          <img class="copyright__logo" src="img/logo-academy.svg" width="27" height="34" alt="Логотип HTML Academy">
+        </a>
       </div>
     </footer>
 </body>

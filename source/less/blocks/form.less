@@ -1,8 +1,10 @@
 .form-request {
   margin: 0;
   padding: 0;
-  padding-right: 20px;
-  padding-left: 20px;
+  font-size: 16px;
+  line-height: 18px;
+  text-transform: uppercase;
+  color: @special_dark-grey-2;
 }
 
 .page-title {
@@ -10,6 +12,9 @@
   line-height: 36px;
   font-weight: 500;
   color: @basic_black;
+  padding-right: 20px;
+  padding-left: 20px;
+  text-transform: none;
 }
 
 .form__title {
@@ -18,29 +23,76 @@
   font-weight: 500;
   text-transform: uppercase;
   margin-bottom: 39px;
+  padding-right: 20px;
+  padding-left: 20px;
 }
 
-.filter__client,
+.filter__client {
+  margin: 0;
+  padding: 0;
+  border: none;
+  border-bottom: 1px solid @border_line;
+}
+
 .filter__target,
 .filter__contacts,
 .filter__comment,
 .filter__extra {
-  display: flex;
-  flex-direction: column;
   margin: 0;
   padding: 0;
   border: none;
 }
 
-.filter__client-label {
+.filter__comment-wrapper {
+  padding-right: 20px;
+  padding-left: 20px;
+}
+
+.filter__comment-text {
+  width: 100%;
+  box-sizing: border-box;
+  padding-top: 13px;
+  padding-right: 12px;
+  padding-left: 15px;
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: normal;
+  font-family: "Oswald", sans-serif;
+  text-transform: uppercase;
+  color: @special_dark-grey;
+  border: 1px solid @border_line;
+}
+
+.filter__client-list {
+  margin: 0;
+  padding: 0;
+  padding-right: 20px;
+  padding-left: 20px;
+  padding-bottom: 27px;
+  list-style: none;
+}
+
+.filter__client-label,
+.filter__contacts-label {
+  margin-right: 14px;
+  padding-top: 14px;
   font-size: 16px;
   line-height: 18px;
   text-transform: uppercase;
+  white-space: nowrap;
 }
 
-.filter__client-input {
-  display: inline-block;
-  width: auto;
+.filter__client-item,
+.filter__contacts-item {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 12px;
+}
+
+.filter__client-input,
+.filter__contacts-email,
+.filter__contacts-tel {
+  width: 100%;
   font-size: 16px;
   line-height: 18px;
   text-transform: uppercase;
@@ -48,30 +100,79 @@
   padding-top: 13px;
   padding-bottom: 14px;
   padding-left: 14px;
-  margin-left: 14px;
-  margin-bottom: 13px;
   color: @special_dark-grey;
+  border: 1px solid @border_line;
 }
 
-.filter__target-list,
-.filter__contacts-list,
-.filter__extra-list {
+.filter__target-list {
   margin: 0;
   padding: 0;
+  padding-top: 20px;
+  padding-right: 20px;
+  padding-left: 20px;
+  padding-bottom: 22px;
+  list-style: none;
+  border-bottom: 1px solid @border_line;
+}
+
+.filter__target-item {
+  margin-bottom: 19px;
+}
+
+.filter__client-item:last-child,
+.filter__target-item:last-child,
+.filter__contacts-item:last-child {
+  margin-bottom: 0;
+}
+
+.filter__contacts-list {
+  margin: 0;
+  padding: 0;
+  padding-right: 20px;
+  padding-left: 20px;
   list-style: none;
 }
 
-.filter__extra-legend {
+.filter__extra-list {
+  margin: 0;
+  padding: 0;
+  padding-right: 20px;
+  padding-left: 20px;
+  padding-bottom: 27px;
+  list-style: none;
+}
+
+.filter__contacts-legend,
+.filter__extra-legend,
+.filter__comment-legend {
   font-size: 24px;
   line-height: 26px;
+  text-transform: none;
+  padding-top: 26px;
+  padding-right: 20px;
+  padding-left: 20px;
   margin-bottom: 34px;
+  color: @basic_black;
 }
+
+//.filter__comment-legend::after {
+//  content: "";
+//  display: inline-block;
+//  vertical-align: middle;
+//  width: 100%;
+//  height: 2px;
+//  background-color: @basic_green;
+//  border: solid @basic_white;
+//  border-width: 0 23px;
+//  margin-right: -100%;
+//}
 
 .filter__extra-item {
   font-size: 16px;
   line-height: 18px;
   text-transform: uppercase;
   padding-bottom: 13px;
+  color: @basic_black;
 }
 
 .form__request-legend {
@@ -80,15 +181,26 @@
   font-weight: 600;
   text-align: center;
   font-family: "Arial", sans-serif;
+  text-transform: none;
+}
+
+.form__request-button-wrapper {
+  padding-right: 20px;
+  padding-left: 20px;
 }
 
 .form__request-button {
   display: block;
+  width: 100%;
   padding: 10px 20px;
+  font: 16px;
+  line-height: 20px;
+  font-family: "Oswald", sans-serif;
   text-decoration: none;
   text-transform: uppercase;
   background-color: @basic_green;
   color: @basic_white;
+  border: none;
 
   &:hover {
     background-color: @basic_green-2;

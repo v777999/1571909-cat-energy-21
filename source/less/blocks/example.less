@@ -2,6 +2,30 @@
   margin: 0;
   padding: 27px 21px 18px 20px;
   background-color: @basic_grey;
+
+  @media (min-width: @tablet-width) {
+    background-image: linear-gradient(to bottom, @basic_white 57%, @basic_grey 0), url("/img/image_cat_tablet.png");
+
+    .example-container {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .example__price {
+      font-size: 20px;
+      line-height: 20px;
+      padding-top: 10px;
+      width: 184px;
+      text-align: right;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 0;
+    padding-bottom: 75px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
 }
 
 .example__title {
@@ -10,6 +34,13 @@
   line-height: 40px;
   font-weight: normal;
   color: @basic_black;
+
+  @media (min-width: @tablet-width) {
+    font-size: 60px;
+    line-height: 60px;
+    font-weight: normal;
+    padding-bottom: 30px;
+  }
 }
 
 .example__data {
@@ -27,6 +58,16 @@
   box-sizing: border-box;
   height: 64px;
   margin-bottom: 40px;
+
+  @media (min-width: @tablet-width) {
+    width: 162px;
+  }
+}
+
+.example__item:first-child {
+  @media (min-width: @tablet-width) {
+    margin-right: 42px;
+  }
 }
 
 .example__description {
@@ -35,6 +76,11 @@
   line-height: 18px;
   font-weight: 400;
   color: @special_dark-grey;
+
+  @media (min-width: @tablet-width) {
+    font-size: 16px;
+    line-height: 24px;
+  }
 }
 
 .example__value {
@@ -53,10 +99,20 @@
   line-height: 12px;
   text-transform: lowercase;
   padding: 0;
+  padding-left: 5px;
+  padding-right: 5px;
   margin-top: -33px;
-  margin-left: 15px;
-  margin-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 80px;
   background-color: @basic_grey;
+
+  @media (min-width: @tablet-width) {
+    font-size: 14px;
+    line-height: 14px;
+    width: 130px;
+    background-color: @basic_white;
+  }
 }
 
 .example__price {
@@ -72,6 +128,10 @@
   display: block;
   margin-left: auto;
   margin-right: auto;
+}
+
+.example__slider {
+  width: auto;
 }
 
 .example__slider-toggles {

@@ -3,43 +3,208 @@
   padding: 0;
 }
 
+.programs__wrapper {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
 .programs__title {
+  position: relative;
   font-size: 24px;
   line-height: 37px;
   font-weight: normal;
   text-transform: uppercase;
-  text-align: center;
+  margin-left: 79px;
   color: @basic_black;
+
+  @media (min-width: @tablet-width) {
+    margin: 0;
+    font-size: 36px;
+    line-height: 36px;
+    margin-left: 53px;
+  }
+
+  @media (min-width: @desktop-width) {
+    left: 124px;
+    top: 10px;
+  }
 }
 
 .programs__list {
   margin: 0;
   padding: 0;
   list-style: none;
+  justify-content: space-between;
+
+  @media (min-width: @desktop-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 80px;
+    padding-top: 0;
+    margin-bottom: 82px;
+  }
 }
 
 .programs__item {
+  position: relative;
   margin-bottom: 20px;
-  margin-right: 20px;
-  margin-left: 20px;
-  padding: 5px 33px 18px 20px;
+  padding: 5px 20px 18px 20px;
   background-color: @basic_grey;
+
+  @media (min-width: @tablet-width) {
+    padding-top: 77px;
+    padding-bottom: 53px;
+  }
 }
 
 .programs__description {
+  position: relative;
   padding-bottom: 23px;
   font-family: "Arial", sans-serif;
   font-size: 14px;
   line-height: 18px;
   font-weight: 400;
   border-bottom: 1px solid @border_line;
+
+  @media (min-width: @tablet-width) {
+    font-size: 16px;
+    line-height: 24px;
+    margin-left: 53px;
+    border: none;
+    width: 377px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin: 0;
+    left: 22px;
+    top: 73px;
+  }
 }
 
 .programs__item-button {
+  position: relative;
   font-size: 16px;
   line-height: 16px;
   font-weight: 400;
   color: @basic_black;
   text-decoration: none;
   text-transform: uppercase;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 30px;
+    margin-left: 53px;
+    border: none;
+
+    @media (min-width: @desktop-width) {
+      margin-left: 20px;
+      top: 63px;
+    }
+  }
+}
+
+.programs__item-button::after {
+  position: absolute;
+  margin-left: 15px;
+  content: "";
+  background-image: url("../img/icon_arrow.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 32px;
+  height: 12px;
+
+  @media (min-width: @tablet-width) {
+    margin-left: 25px;
+    margin-top: 8px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-left: 28px;
+  }
+}
+
+.programs__item--slim::before {
+  position: absolute;
+  content: "";
+  margin-top: 15px;
+  background-image: url("/img/cat_back.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 50px;
+  height: 53px;
+
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: block;
+    width: 100px;
+    height: 106px;
+    top: 41px;
+    left: 42px;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .programs__item--slim::after {
+    position: absolute;
+    content: "";
+    right: 80px;
+    margin-top: -180px;
+    background-image: url("/img/cat_back.svg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 200px;
+    height: 200px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .programs__item--slim::after {
+    display: none;
+  }
+}
+
+.programs__item--pro::before {
+  position: absolute;
+  content: "";
+  margin-top: 15px;
+  background-image: url("/img/cat_back-pro.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 67px;
+  height: 50px;
+
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: block;
+    width: 134px;
+    height: 100px;
+    top: 41px;
+    left: 42px;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .programs__item--pro::after {
+    position: absolute;
+    content: "";
+    right: 38px;
+    margin-top: -160px;
+    background-image: url("/img/cat_back-pro.svg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 268px;
+    height: 200px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .programs__item--pro::after {
+    display: none;
+  }
 }

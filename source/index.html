@@ -10,27 +10,39 @@
 
 <body class="page__body">
   <header class="page-header">
-    <a class="page-header__logo">
-      <img src="img/logotype-name-mobile.svg" width="101" height="18" alt="Логотип Кэт энерджи">
-    </a>
-    <button class="main-nav__toggle" type="button">Открыть меню</button>
-    <nav class="main-nav">
-      <a>Главная</a>
-      <a href="catalog.html">Каталог продукции</a>
-      <a href="form.html">Подбор программы</a>
-    </nav>
+    <div class="page-header__wrapper">
+      <nav class="main-nav main-nav--closed main-nav--nojs">
+        <div class="main-nav__wrapper">
+          <a class="page-header__logo">
+            <img src="img/logotype-name-mobile.svg" width="101" height="18" alt="Логотип Кэт энерджи">
+          </a>
+          <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
+          <ul class="main-nav__list site-list">
+            <li class="site-list__item site-list__item--active">
+              <a>Главная</a>
+            </li>
+            <li class="site-list__item">
+              <a href="catalog.html">Каталог продукции</a>
+            </li>
+            <li class="site-list__item">
+              <a href="form.html">Подбор программы</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
   </header>
 
   <main class="page-main">
 
     <section class="promo">
       <div class="promo__wrapper">
-        <h1 class="promo__header-title">Функциональное питание для котов</h1>
+        <h1 class="promo__header-title">Функциональное<br>питание для котов</h1>
         <p class="promo__header-slogan">Занялся собой? Займись котом!</p>
         <a class="promo__header-image">
           <img src="img/index-can-mobile-1.png" width="280" height="270" alt="Cat Energy Pro Курица">
         </a>
-          <a class="promo__button" href="form.html">Подобрать программу</a>
+        <a class="promo__button" href="form.html">Подобрать программу</a>
       </div>
     </section>
 
@@ -61,8 +73,7 @@
           <p>Функциональное питание содержит только полезные питательные вещества.</p>
         </li>
         <li class="advantages__item advantages__item--powder">
-          <p>Выпускается в виде порошка, который нужно лишь залить кипятком и готово.
-          </p>
+          <p>Выпускается в виде порошка, который нужно лишь залить кипятком и готово.</p>
         </li>
         <li class="advantages__item advantages__item--replace">
           <p>Замените один-два приема обычной еды на наше функциональное питание.</p>
@@ -79,21 +90,28 @@
         <p class="example__description">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy
           Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по
           16 часов в день.</p>
-        <ul class="example__data">
-          <li class="example__item">
-            <p class="example__value">5 кг</p>
-            <p class="example__legend">Снижение<br>веса</p>
-          </li>
-          <li class="example__item">
-            <p class="example__value">60 дней</p>
-            <p class="example__legend">Затрачено<br>времени</p>
-          </li>
-        </ul>
-        <p class="example__price">Затраты на питание: 15 000 руб.</p>
+        <div class="example-container">
+          <ul class="example__data">
+            <li class="example__item">
+              <p class="example__value">5 кг</p>
+              <p class="example__legend">Снижение веса</p>
+            </li>
+            <li class="example__item">
+              <p class="example__value">60 дней</p>
+              <p class="example__legend">Затрачено времени</p>
+            </li>
+          </ul>
+          <p class="example__price">Затраты на питание: 15 000 руб.</p>
+        </div>
         <div class="example__slider">
-          <img class="example__image" src="img/before-mobile-1.png" width="311" height="232" alt="Кот до похудения">
+          <picture>
+            <source media="(min-width: 1440px)" srcset="img/image_cat_desktop.png 1x, image_cat_desktop@2x.png 2x">
+            <source media="(min-width: 768px)" srcset="img/image_cat_tablet.png 1x, image_cat_tablet@2x.png 2x">
+            <img class="example__image" src="img/before-mobile-1.png" alt="Кот до похудения">
+          </picture>
+          <!--<img class="example__image" src="img/before-mobile-1.png" width="311" height="232" alt="Кот до похудения">
           <img class="example__image visually-hidden" src="img/after-mobile-1.png" width="251" height="240"
-            alt="Кот после похудения">
+            alt="Кот после похудения">-->
           <p class="example__slider-toggles">
             <button class="example__slider-toggle example__slider-toggle--current" type="button">Было</button>
             <button class="example__slider-toggle" type="button">Стало</button>
@@ -127,6 +145,24 @@
       </a>
     </div>
   </footer>
+
+  <script>
+    var navMain = document.querySelector('.main-nav');
+    var navToggle = document.querySelector('.main-nav__toggle');
+
+    navMain.classList.remove('main-nav--nojs');
+
+    navToggle.addEventListener('click', function () {
+      if (navMain.classList.contains('main-nav--closed')) {
+        navMain.classList.remove('main-nav--closed');
+        navMain.classList.add('main-nav--opened');
+      } else {
+        navMain.classList.add('main-nav--closed');
+        navMain.classList.remove('main-nav--opened');
+      }
+    });
+  </script>
+
 </body>
 
 </html>

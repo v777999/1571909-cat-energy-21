@@ -8,7 +8,7 @@
   }
 
   @media (min-width: @desktop-width) {
-    padding-top: 71px;
+    padding-top: 0;
     padding-bottom: 0;
     border: none;
   }
@@ -60,8 +60,12 @@
     display: block;
     font-size: 16px;
     line-height: 24px;
-    width: 60%;
+    margin-right: 153px;
     min-height: 280px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-right: 0;
   }
 }
 
@@ -107,6 +111,7 @@
     background-image: url("/img/2.svg");
     background-repeat: no-repeat;
     background-position: 66% 0%;
+    margin-right: 79px;
   }
 
   &&::before {
@@ -145,6 +150,7 @@
     background-image: url("/img/4.svg");
     background-repeat: no-repeat;
     background-position: 66% 0%;
+    margin-right: 79px;
   }
 
   &&::before {
@@ -156,6 +162,10 @@
       width: 80px;
       height: 80px;
     }
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-right: 0;
   }
 }
 

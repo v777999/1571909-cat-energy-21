@@ -4,8 +4,20 @@
 }
 
 .programs__wrapper {
-  padding-left: 20px;
-  padding-right: 20px;
+  padding-left: 0;
+  padding-right: 0;
+
+  @media (max-width: @mobile-width-only) {
+    padding: 0 20px;
+  }
+
+  @media (min-width: @tablet-width) {
+    padding: 0 30px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 0 110px;
+  }
 }
 
 .programs__title {

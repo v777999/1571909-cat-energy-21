@@ -1,4 +1,5 @@
 .promo {
+  position: relative;
   margin: 0;
   padding: 0;
   height: 302px;
@@ -28,9 +29,21 @@
   }
 
   @media (min-width: @desktop-width) {
+    .promo__header-image {
+      display: none;
+    }
     display: grid;
     grid-template-columns: 1fr 1fr;
-    margin-top: 62px;
+    padding: 0;
+    margin: 0;
+    margin-top: 250px;
+    margin-left: auto;
+    margin-right: auto;
+    background-image: linear-gradient(fade(@basic_green, 85%), fade(@basic_green, 85%)), url("/img/index-background-mobile-2.jpg");
+    width: 709px;
+    height: 609px;
+    background-size: cover;
+    background-repeat: no-repeat;
   }
 }
 

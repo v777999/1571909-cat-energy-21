@@ -40,14 +40,12 @@
 .site-list__item a[href] {
   @media (min-width: @tablet-width) {
     &:hover {
-      color: #826550;
-      background-color: #000000;
+      color: @basic_white;
+      opacity: 0.3;
     }
 
     &:active {
-      color: #ffffff;
-      background-color: #000000;
-      opacity: 0.3;
+      color: @basic_white;
     }
   }
 }
@@ -76,5 +74,19 @@
     line-height: 24px;
     background: none;
     border: none;
+  }
+
+  @media (min-width: @desktop-width) {
+    color: @basic_white;
+
+    &:hover {
+      color: @basic_white;
+      opacity: 0.3;
+    }
+
+    &:active {
+      color: @basic_white;
+      opacity: 1;
+    }
   }
 }

@@ -1,0 +1,125 @@
+.main-nav {
+  position: relative;
+  width: auto;
+  min-height: 66px;
+  //background-color: @basic_white;
+}
+
+.main-nav__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.main-nav__wrapper {
+  padding-top: 24px;
+
+  @media (min-width: @tablet-width) {
+    position: relative;
+    padding: 0 0 0 30px;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-right: 0;
+    padding-left: 50px;
+  }
+}
+
+.main-nav__toggle {
+  position: absolute;
+  top: 0;
+  right: 20px;
+  z-index: 2;
+  display: block;
+  width: 60px;
+  height: 66px;
+  background-color: @basic_white;
+  cursor: pointer;
+  border: none;
+
+  &:hover,
+  &:active {
+    background-color: @basic_white;
+  }
+
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
+}
+
+.main-nav--closed .main-nav__toggle::before {
+  content: "";
+  position: absolute;
+  top: 25px;
+  right: 0;
+  width: 24px;
+  height: 2px;
+  background-color: @basic_black;
+  box-shadow: 0 8px 0 0 @basic_black, 0 16px 0 0 @basic_black;
+}
+
+.main-nav--closed .main-nav__toggle:active::before {
+  background-color: fade(@basic_black, 30%);
+  box-shadow:
+    0 8px 0 0 fade(@basic_black, 30%),
+    0 16px 0 0 fade(@basic_black, 30%);
+}
+
+@media (max-width: @mobile-width-only) {
+  .main-nav--closed .site-list__item {
+    display: none;
+  }
+
+  .main-nav--nojs .main-nav__toggle {
+    display: none;
+  }
+
+  .main-nav--nojs .main-nav__wrapper {
+    position: static;
+    min-height: 0;
+  }
+
+  .main-nav--nojs .site-list__item {
+    display: block;
+  }
+
+  .main-nav--nojs .site-list__item--active a {
+    padding-right: 21px;
+    padding-left: 21px;
+    text-align: left;
+  }
+}
+
+.main-nav--opened .main-nav__toggle {
+  top: 0;
+  right: 0;
+  left: auto;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    top: 34px;
+    right: 20px;
+    width: 18px;
+    height: 2px;
+    background-color: @basic_black;
+  }
+
+  &::before {
+    transform: rotate(45deg);
+    box-shadow: none;
+  }
+
+  &::after {
+    transform: rotate(-45deg);
+  }
+
+  &:active::before,
+  &:active::after {
+    background-color: fade(@basic_black, 30%);
+  }
+}

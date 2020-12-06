@@ -1,10 +1,25 @@
 .page {
   margin: 0;
   padding: 0;
+  min-width: 320px;
   height: 100%;
   font-family: "Oswald", sans-serif;
   font-size: 14px;
   line-height: 18px;
+  background-color: transparent;
+
+  @media (min-width: @tablet-width) {
+    min-width: 768px;
+  }
+
+  @media (min-width: @desktop-width) {
+    min-width: 1440px;
+  }
+}
+
+.page-main {
+  margin: 0;
+  padding: 0;
 }
 
 .page__body {
@@ -15,5 +30,89 @@
   min-height: 100%;
   margin: 0;
   color: @special_dark-grey;
-  background-color: @basic_white;
+  background-color: transparent;
+  //background-color: @basic_white;
+}
+
+.page-header {
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  //background-color: @basic_white;
+  color: @basic_black;
+  text-align: center;
+
+  @media (max-width: @mobile-width-only) {
+    padding: 0;
+  }
+
+  @media (min-width: @tablet-width) {
+    padding: 0 30px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 0 110px;
+    background-color: transparent;
+  }
+}
+
+.page-header__wrapper {
+  height: 68px;
+  text-align: center;
+
+  @media (max-width: @mobile-width-only) {
+    padding: 0 0 0 20px;
+    justify-content: space-between;
+  }
+
+  @media (min-width: @tablet-width) {
+    padding: 0 30px;
+    justify-content: space-between;
+  }
+
+  @media (min-width: @desktop-width) {
+    min-height: 165px;
+    padding-top: 39px;
+    padding-bottom: 53px;
+  }
+}
+
+.page-header__logo {
+  @media (min-width: @tablet-width) {
+    padding-top: 41px;
+    margin-left: 41px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 41px;
+    margin-left: 15px;
+  }
+}
+
+.page-header__logo::before {
+  position: absolute;
+  content: "";
+  left: 20px;
+  margin-top: -12px;
+  background-image: url("/img/logo-mobile.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 33px;
+  height: 37px;
+
+  @media (min-width: @tablet-width) {
+    left: 0;
+    margin-top: -18px;
+    background-image: url("/img/logo-tablet.svg");
+    width: 60px;
+    height: 50px;
+  }
+
+  @media (min-width: @desktop-width) {
+    left: 0;
+    margin-top: -18px;
+    background-image: url("/img/logo-desktop.svg");
+    width: 60px;
+    height: 50px;
+  }
 }

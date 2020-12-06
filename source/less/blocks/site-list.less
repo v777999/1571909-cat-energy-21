@@ -90,3 +90,29 @@
     }
   }
 }
+
+.site-list--form a {
+  @media (min-width: @tablet-width) {
+    padding: 0;
+    padding-top: 39px;
+    padding-bottom: 23px;
+    font-size: 18px;
+    line-height: 24px;
+    background: none;
+    border: none;
+  }
+
+  @media (min-width: @desktop-width) {
+    color: @basic_black;
+
+    &:hover {
+      color: @basic_white;
+      opacity: 0.3;
+    }
+
+    &:active {
+      color: @basic_white;
+      opacity: 1;
+    }
+  }
+}

@@ -3,6 +3,11 @@
   padding-left: 20px;
   padding-right: 20px;
   background-color: @basic_grey;
+
+  @media (min-width: @tablet-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
 }
 
 .page-footer__logo-name {
@@ -10,6 +15,10 @@
   text-align: center;
   padding-bottom: 32px;
   border-bottom: 1px solid @border_line;
+
+  @media (min-width: @tablet-width) {
+    margin-top: 21px;
+  }
 }
 
 .page-footer__social {
@@ -30,6 +39,13 @@
   border-top: 1px solid @border_line;
   text-decoration: none;
   justify-content: space-between;
+
+  @media (min-width: @tablet-width) {
+    margin-top: 0;
+    border-top: none;
+    justify-content: stretch;
+    justify-self: right;
+  }
 }
 
 .copyright__text {

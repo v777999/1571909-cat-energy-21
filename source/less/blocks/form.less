@@ -1,3 +1,25 @@
+.form__page-header {
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  //background-color: @basic_white;
+  color: @basic_black;
+  text-align: center;
+
+  @media (max-width: @mobile-width-only) {
+    padding: 0;
+  }
+
+  @media (min-width: @tablet-width) {
+    padding: 0 30px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 0 110px;
+    background-color: transparent;
+  }
+}
+
 .form-request__wrapper {
   @media (max-width: @mobile-width-only) {
     padding-left: 20px;

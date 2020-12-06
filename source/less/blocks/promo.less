@@ -3,17 +3,18 @@
   margin: 0;
   padding: 0;
   height: 302px;
-  padding-top: 27px;
   background-image: linear-gradient(fade(@basic_green, 85%), fade(@basic_green, 85%)), url("/img/index-background-mobile-2.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   text-align: center;
-  margin-bottom: 170px;
+
+  @media (max-width: @mobile-width-only) {
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-bottom: 200px;
+  }
 
   @media (min-width: @tablet-width) {
-    .promo__header-image {
-      display: none;
-    }
     display: flex;
     flex-direction: column;
     padding: 0;
@@ -21,29 +22,17 @@
     margin-top: 250px;
     margin-left: auto;
     margin-right: auto;
-    background-image: url("/img/index-can-tablet-1.png");
-    width: 709px;
+    margin-bottom: 82px;
+    background-image: none;
     height: 609px;
     background-size: cover;
     background-repeat: no-repeat;
   }
 
   @media (min-width: @desktop-width) {
-    .promo__header-image {
-      display: none;
-    }
-    display: grid;
-    grid-template-columns: 1fr 1fr;
     padding: 0;
     margin: 0;
-    margin-top: 250px;
-    margin-left: auto;
-    margin-right: auto;
-    background-image: linear-gradient(fade(@basic_green, 85%), fade(@basic_green, 85%)), url("/img/index-background-mobile-2.jpg");
-    width: 709px;
-    height: 609px;
-    background-size: cover;
-    background-repeat: no-repeat;
+    margin-bottom: 82px;
   }
 }
 
@@ -52,11 +41,31 @@
   min-width: 320px;
   margin: 0;
   padding: 0;
+  padding-top: 27px;
 
   @media (min-width: @tablet-width) {
     display: flex;
     flex-direction: column;
     margin-top: 62px;
+    margin-bottom: 100px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin: 0;
+    padding: 0;
+    //background-image: linear-gradient(fade(@basic_green, 85%), fade(@basic_green, 85%)), url("/img/index-background-mobile-2.jpg");
+  }
+}
+
+.promo__container {
+  @media (min-width: @desktop-width) {
+    position: absolute;
+    background-image: linear-gradient(fade(@basic_green, 85%), fade(@basic_green, 85%)), url("/img/index-background-desktop-1.jpg");
+    top: -86px;
+    right: 0;
+    width: 720px;
+    height: 694px;
+    z-index: -1;
   }
 }
 
@@ -76,8 +85,16 @@
     color: @basic_black;
     width: 414px;
     text-align: left;
-    padding-left: 90px;
+    padding-left: 117px;
     margin-top: -250px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 0;
+    padding-left: 190px;
+    padding-top: 130px;
+    padding-bottom: 40px;
+    margin: 0;
   }
 }
 
@@ -96,8 +113,21 @@
     color: @basic_black;
     width: 414px;
     text-align: left;
-    padding-left: 90px;
-    margin-bottom: 100px;
+    padding-left: 117px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-left: 190px;
+  }
+}
+
+.promo__header-image {
+  @media (min-width: @desktop-width) {
+    position: absolute;
+    margin-top: 143px;
+    margin-left: -522px;
+    width: 552px;
+    height: 499px;
   }
 }
 
@@ -129,9 +159,17 @@
   }
 
   @media (min-width: @tablet-width) {
+    position: absolute;
     padding: 14px 20px;
     width: 244px;
-    margin-top: -40px;
-    margin-left: 90px;
+    margin-left: 117px;
+  }
+
+  @media (min-width: @desktop-width) {
+    position: absolute;
+    padding: 14px 20px;
+    width: 244px;
+    margin-top: 455px;
+    margin-left: 190px;
   }
 }

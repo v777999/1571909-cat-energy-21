@@ -137,6 +137,12 @@
   }
 }
 
+.data__text {
+  @media (min-width: @tablet-width) {
+    text-align: right;
+  }
+}
+
 .data__value {
   text-align: right;
 
@@ -198,6 +204,7 @@
   @media (min-width: @tablet-width) {
     display: grid;
     grid-template-columns: 1fr 1/4fr;
+    column-gap: 49px;
   }
 }
 
@@ -234,8 +241,8 @@
   margin-right: auto;
 
   @media (min-width: @tablet-width) {
-    display: flex;
-    flex-wrap: nowrap;
+    display: grid;
+    grid-template-columns: 1fr 1/2fr;
   }
 
   @media (min-width: @desktop-width) {

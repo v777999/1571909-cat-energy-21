@@ -45,13 +45,17 @@
         <div class="promo__container">
           <a class="promo__header-image">
             <picture>
+              <source type="image/webp" media="(min-width: 1440px)"
+                srcset="img/index-can-desktop.webp 1x, index-can-desktop@2x.webp 2x">
+              <source type="image/webp" media="(min-width: 768px)"
+                srcset="img/index-can-tablet-1.webp 1x, index-can-tablet-1@2x.webp 2x">
+              <source type="image/webp" srcset="img/index-can-mobile-1.webp 1x, img/index-can-mobile1@2x.webp 2x">
               <source media="(min-width: 1440px)" srcset="img/index-can-desktop.png 1x, index-can-desktop@2x.png 2x">
               <source media="(min-width: 768px)" srcset="img/index-can-tablet-1.png 1x, index-can-tablet-1@2x.png 2x">
               <img class="promo__image" src="img/index-can-mobile-1.png" srcset="img/index-can-mobile1@2x.png 2x"
                 alt="Cat Energy Pro Курица">
             </picture>
           </a>
-
         </div>
         <a class="promo__button" href="form.html">Подобрать программу</a>
       </div>
@@ -122,13 +126,16 @@
       </div>
       <div class="example__slider">
         <picture>
+          <source type="image/webp" media="(min-width: 1440px)"
+            srcset="img/image_cat_desktop.webp 1x, image_cat_desktop@2x.webp 2x">
+          <source type="image/webp" media="(min-width: 768px)"
+            srcset="img/image_cat_tablet.webp 1x, image_cat_tablet@2x.webp 2x">
+          <source type="image/webp" srcset="img/before-mobile-1.webp 1x, img/before-mobile-1@2x.webp 2x">
           <source media="(min-width: 1440px)" srcset="img/image_cat_desktop.png 1x, image_cat_desktop@2x.png 2x">
           <source media="(min-width: 768px)" srcset="img/image_cat_tablet.png 1x, image_cat_tablet@2x.png 2x">
-          <img class="example__image" src="img/before-mobile-1.png" alt="Кот до похудения">
+          <img class="example__image" src="img/before-mobile-1.png" srcset="img/before-mobile-1@2x.png 2x"
+            alt="Cat Energy Pro Курица">
         </picture>
-        <!--<img class="example__image" src="img/before-mobile-1.png" width="311" height="232" alt="Кот до похудения">
-        <img class="example__image visually-hidden" src="img/after-mobile-1.png" width="251" height="240"
-          alt="Кот после похудения">-->
         <p class="example__slider-toggles">
           <button class="example__slider-toggle example__slider-toggle--current" type="button">Было</button>
           <button class="example__slider-toggle" type="button">Стало</button>

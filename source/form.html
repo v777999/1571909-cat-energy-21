@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>HTML Academy: Кэт энерджи</title>
   <link rel="stylesheet" href="css/normalize.css">
-  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body class="page__body">
@@ -128,49 +128,49 @@
         </form>
       </div>
     </section>
+  </main>
 
-    <footer class="page-footer">
-      <section class="invitation">
-        <div class="invitation__wrapper">
-          <h2 class="invitation__title">Приглашаем<br>к сотрудничеству дилеров!</h2>
-          <p class="invitation__address">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
-        </div>
-        <div class="invitation__map"></div>
-      </section>
-      <div class="page-footer__wrapper">
-        <a class="page-footer__logo-name">
-          <img src="img/logotype-name-mobile.svg" width="128" height="24" alt="Кэт энерджи">
-        </a>
-        <div class="page-footer__social social">
-          <a class="social__link social__link--vkontakte" href="https://vk.com/htmlacademy">Мы в Вконтакте</a>
-          <a class="social__link social__link--instagram" href="https://www.instagram.com/htmlacademy">Мы в
-            Инстаграме</a>
-          <a class="social__link social__link--facebook" href="https://www.facebook.com/htmlacademy">Мы в Фейсбуке</a>
-        </div>
-        <a class="page-footer__copyright" href="https://htmlacademy.ru/intensive/adaptive" target="_blank">
-          <span class="copyright__text">HTML Academy</span>
-          <img class="copyright__logo" src="img/logo-academy.svg" width="27" height="34" alt="Логотип HTML Academy">
-        </a>
+  <footer class="page-footer">
+    <section class="invitation">
+      <div class="invitation__wrapper">
+        <h2 class="invitation__title">Приглашаем<br>к сотрудничеству дилеров!</h2>
+        <p class="invitation__address">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
       </div>
-    </footer>
+      <div class="invitation__map"></div>
+    </section>
+    <div class="page-footer__wrapper">
+      <a class="page-footer__logo-name">
+        <img src="img/logotype-name-mobile.svg" width="128" height="24" alt="Кэт энерджи">
+      </a>
+      <div class="page-footer__social social">
+        <a class="social__link social__link--vkontakte" href="https://vk.com/htmlacademy">Мы в Вконтакте</a>
+        <a class="social__link social__link--instagram" href="https://www.instagram.com/htmlacademy">Мы в
+          Инстаграме</a>
+        <a class="social__link social__link--facebook" href="https://www.facebook.com/htmlacademy">Мы в Фейсбуке</a>
+      </div>
+      <a class="page-footer__copyright" href="https://htmlacademy.ru/intensive/adaptive" target="_blank">
+        <span class="copyright__text">HTML Academy</span>
+        <img class="copyright__logo" src="img/logo-academy.svg" width="27" height="34" alt="Логотип HTML Academy">
+      </a>
+    </div>
+  </footer>
 
+  <script>
+    var navMain = document.querySelector('.main-nav');
+    var navToggle = document.querySelector('.main-nav__toggle');
 
-    <script>
-      var navMain = document.querySelector('.main-nav');
-      var navToggle = document.querySelector('.main-nav__toggle');
+    navMain.classList.remove('main-nav--nojs');
 
-      navMain.classList.remove('main-nav--nojs');
-
-      navToggle.addEventListener('click', function () {
-        if (navMain.classList.contains('main-nav--closed')) {
-          navMain.classList.remove('main-nav--closed');
-          navMain.classList.add('main-nav--opened');
-        } else {
-          navMain.classList.add('main-nav--closed');
-          navMain.classList.remove('main-nav--opened');
-        }
-      });
-    </script>
+    navToggle.addEventListener('click', function () {
+      if (navMain.classList.contains('main-nav--closed')) {
+        navMain.classList.remove('main-nav--closed');
+        navMain.classList.add('main-nav--opened');
+      } else {
+        navMain.classList.add('main-nav--closed');
+        navMain.classList.remove('main-nav--opened');
+      }
+    });
+  </script>
 </body>
 
 </html>

@@ -13,7 +13,7 @@
 .page-footer__logo-name {
   display: block;
   text-align: center;
-  padding-bottom: 32px;
+  padding-bottom: 29px;
   border-bottom: 1px solid @border_line;
 
   @media (min-width: @tablet-width) {
@@ -22,9 +22,13 @@
 }
 
 .page-footer__social {
-  text-align: center;
+  display: flex;
   margin-top: 20px;
-  margin-bottom: 21px;
+  width: 130px;
+  margin-left: auto;
+  margin-right: auto;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .social__link {
@@ -33,8 +37,8 @@
 
 .page-footer__copyright {
   display: flex;
-  margin-top: 21px;
-  padding-top: 21px;
+  margin-top: 20px;
+  padding-top: 31px;
   padding-bottom: 22px;
   border-top: 1px solid @border_line;
   text-decoration: none;
@@ -51,5 +55,11 @@
 .copyright__text {
   font-size: 16px;
   line-height: 18px;
+  font-family: "Arial", sans-serif;
+  margin-left: -1px;
   color: @special_dark-grey;
+}
+
+.copyright__logo {
+  margin-top: -8px;
 }

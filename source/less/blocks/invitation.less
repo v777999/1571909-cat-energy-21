@@ -9,8 +9,9 @@
   }
 
   @media (min-width: @tablet-width) {
-    padding: 66px 72px 51px;
-    background-color: @basic_grey;
+    padding: 64px 82px 38px 72px;
+    margin-top: -5px;
+    background-color: @basic_white;
   }
 
   @media (min-width: @desktop-width) {
@@ -41,16 +42,35 @@
   text-transform: uppercase;
 
   @media (min-width: @tablet-width) {
+    display: block;
     font-size: 20px;
     line-height: 21px;
     width: 171px;
+    padding-top: 2px;
   }
 }
 
 .invitation__title-second {
   position: absolute;
   margin-top: 4px;
-  margin-left: -1px;
+
+  @media (min-width: @tablet-width) {
+    display: block;
+    font-size: 20px;
+    line-height: 19px;
+    padding-top: 0;
+  }
+}
+
+.invitation__title-diler {
+  margin-top: 4px;
+
+  @media (min-width: @tablet-width) {
+    display: block;
+    font-size: 20px;
+    line-height: 19px;
+    padding-top: 25px;
+  }
 }
 
 .invitation__address {
@@ -63,10 +83,20 @@
   color: @special_dark-grey;
 
   @media (min-width: @tablet-width) {
+    position: relative;
     font-size: 16px;
     line-height: 20px;
+    margin-top: -1px;
+    margin-bottom: 20px;
     width: 159px;
     text-align: right;
+  }
+}
+
+.invitation__address-town {
+  @media (min-width: @tablet-width) {
+    display: block;
+    margin-top: 19px;
   }
 }
 
@@ -82,6 +112,7 @@
     background-image: url("../img/location-tablet.jpg");
     background-size: cover;
     background-repeat: no-repeat;
+    width: 768px;
     height: 400px;
   }
 

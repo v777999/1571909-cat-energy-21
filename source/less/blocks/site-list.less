@@ -9,7 +9,9 @@
   @media (min-width: @tablet-width) {
     display: flex;
     flex-wrap: wrap;
-    justify-content: flex-end;
+    margin-top: 3px;
+    margin-left: 0;
+    width: 440px;
   }
 }
 
@@ -19,6 +21,7 @@
 
     &:last-child {
       margin-right: 0;
+      margin-left: 3px;
     }
 
     &--active {
@@ -27,11 +30,12 @@
       &::after {
         content: "";
         position: absolute;
+        top: 71px;
         right: 0;
         bottom: 0;
         left: 0;
-        height: 3px;
-        background: @basic_white;
+        height: 2px;
+        background: @basic_green; // current menu item underline
       }
     }
   }
@@ -55,8 +59,8 @@
   display: block;
   padding-top: 22px;
   padding-bottom: 24px;
-  font-size: 20px;
-  line-height: 20px;
+  font-size: 18px;
+  line-height: 24px;
   font-weight: 500;
   color: @basic_black;
   text-transform: uppercase;
@@ -72,6 +76,7 @@
     padding-bottom: 23px;
     font-size: 18px;
     line-height: 24px;
+    font-weight: 400;
     background: none;
     border: none;
   }

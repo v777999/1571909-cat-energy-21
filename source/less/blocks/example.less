@@ -9,7 +9,7 @@
 
   @media (min-width: @tablet-width) {
     background-image: linear-gradient(to bottom, @basic_white 57%, @basic_grey 0), url("/img/image_cat_tablet.png");
-    padding: 45px 30px 47px;
+    padding: 42px 30px 54px 0;
 
     .example-container {
       display: flex;
@@ -45,6 +45,12 @@
 .example__wrapper {
   padding-left: 20px;
   padding-right: 20px;
+
+  @media (min-width: @tablet-width) {
+    padding-left: 30px;
+    padding-right: 0;
+    margin-bottom: 60px;
+  }
 }
 
 .example__title {
@@ -110,6 +116,9 @@
   @media (min-width: @tablet-width) {
     font-size: 16px;
     line-height: 24px;
+    padding-top: 2px;
+    padding-right: 30px;
+    margin-bottom: 23px;
   }
 }
 
@@ -120,8 +129,13 @@
   text-transform: uppercase;
   border: 1px solid @border_line;
   padding-top: 14px;
-  padding-bottom: 16px;
+  padding-bottom: 19px;
   color: @basic_black;
+
+  @media (min-width: @tablet-width) {
+    font-size: 30px;
+    line-height: 37px;
+  }
 }
 
 .example__legend {
@@ -140,8 +154,17 @@
   @media (min-width: @tablet-width) {
     font-size: 14px;
     line-height: 14px;
-    width: 130px;
+    width: 110px;
     background-color: @basic_white;
+    margin-top: -38px;
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+.example__legend:last-child {
+  @media (min-width: @tablet-width) {
+    width: 140px;
   }
 }
 
@@ -155,6 +178,20 @@
   margin-bottom: 42px;
   margin-left: auto;
   margin-right: auto;
+
+  @media (min-width: @tablet-width) {
+    margin: 0;
+    margin-top: 32px;
+    margin-bottom: 5px;
+    margin-right: 10px;
+  }
+}
+
+.example__price-number {
+  @media (min-width: @tablet-width) {
+    display: block;
+    margin-top: 8px;
+  }
 }
 
 .example__image {
@@ -162,20 +199,35 @@
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 32px;
+
+  @media (min-width: @tablet-width) {
+    width: 708px;
+    height: 620px;
+  }
 }
 
 .example__slider {
   margin: 0;
   padding: 0;
   padding-right: 9px;
+
+  @media (min-width: @tablet-width) {
+    padding-top: 2px;
+    padding-left: 30px;
+    width: 708px;
+  }
 }
 
 .example__slider-toggles {
   margin-bottom: 0;
-  padding-left: 58px;
-  padding-right: 45px;
+  padding-left: 62px;
+  padding-right: 64px;
   display: flex;
   justify-content: space-between;
+
+  @media (min-width: @tablet-width) {
+    margin-top: -100px;
+  }
 }
 
 .example__slider-toggle {
@@ -185,4 +237,11 @@
   font-weight: 400;
   text-transform: uppercase;
   border: none;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 30px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid @border_line;
+  }
 }

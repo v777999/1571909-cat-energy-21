@@ -18,7 +18,7 @@
     position: absolute;
     left: 110px;
     margin-top: 95px;
-    padding: 66px 89px 59px 76px;
+    padding: 66px 89px 63px 76px;
     width: 570px;
     box-sizing: border-box;
     background-color: @basic_white;
@@ -48,6 +48,14 @@
     width: 171px;
     padding-top: 2px;
   }
+
+  @media (min-width: @desktop-width) {
+    display: block;
+    font-size: 20px;
+    line-height: 21px;
+    width: 171px;
+    padding-top: 0;
+  }
 }
 
 .invitation__title-second {
@@ -64,6 +72,8 @@
 
 .invitation__title-diler {
   margin-top: 4px;
+  display: block;
+  padding-top: 18px;
 
   @media (min-width: @tablet-width) {
     display: block;
@@ -86,16 +96,26 @@
     position: relative;
     font-size: 16px;
     line-height: 20px;
-    margin-top: -1px;
+    margin-top: -3px;
     margin-bottom: 20px;
     width: 159px;
     text-align: right;
+  }
+
+  @media (min-width: @desktop-width) {
+    position: absolute;
+    text-align: left;
+    margin-left: 250px;
   }
 }
 
 .invitation__address-town {
   @media (min-width: @tablet-width) {
     display: block;
+    margin-top: 21px;
+  }
+
+  @media (min-width: @desktop-width) {
     margin-top: 19px;
   }
 }
@@ -120,6 +140,7 @@
     background-image: url("../img/location-desktop.jpg");
     background-size: cover;
     background-repeat: no-repeat;
+    width: auto;
     height: 400px;
   }
 }

@@ -12,11 +12,11 @@
 }
 
 .main-nav__wrapper {
-  padding-top: 24px;
+  position: relative;
+  padding-top: 25px;
 
   @media (min-width: @tablet-width) {
-    position: relative;
-    padding: 0 0 0 30px;
+    padding: 0 8px 0 30px;
     display: flex;
     justify-content: space-between;
     margin: 0 auto;
@@ -31,7 +31,7 @@
 .main-nav__toggle {
   position: absolute;
   top: 0;
-  right: 20px;
+  right: 0;
   z-index: 2;
   display: block;
   width: 60px;
@@ -53,8 +53,8 @@
 .main-nav--closed .main-nav__toggle::before {
   content: "";
   position: absolute;
-  top: 25px;
-  right: 0;
+  top: 24px;
+  right: 20px;
   width: 24px;
   height: 2px;
   background-color: @basic_black;

@@ -57,6 +57,7 @@
 }
 
 .page-header__wrapper {
+  position: relative;
   height: 68px;
   text-align: center;
 
@@ -72,47 +73,41 @@
 
   @media (min-width: @desktop-width) {
     min-height: 165px;
-    padding-top: 39px;
+    padding-top: 73px;
     padding-bottom: 53px;
   }
 }
 
 .page-header__logo {
   @media (min-width: @tablet-width) {
-    padding-top: 41px;
-    margin-left: 41px;
+    position: absolute;
+    display: block;
+    width: 175px;
+    height: 52px;
+    padding-top: 24px;
+    margin-left: -150px;
   }
 
   @media (min-width: @desktop-width) {
-    padding-top: 41px;
-    margin-left: 15px;
+    position: absolute;
+    display: block;
+    padding-top: 54px;
+    left: 150px;
+    width: 202px;
+    height: 59px;
   }
 }
 
-.page-header__logo::before {
-  position: absolute;
-  content: "";
-  left: 20px;
-  margin-top: -12px;
-  background-image: url("/img/logo-mobile.svg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  width: 33px;
-  height: 37px;
-
-  @media (min-width: @tablet-width) {
-    left: 0;
-    margin-top: -18px;
-    background-image: url("/img/logo-tablet.svg");
-    width: 60px;
-    height: 50px;
-  }
-
-  @media (min-width: @desktop-width) {
-    left: 0;
-    margin-top: -18px;
-    background-image: url("/img/logo-desktop.svg");
-    width: 60px;
-    height: 50px;
+.mobile-logo::before {
+  @media (max-width: @mobile-width-only) {
+    position: absolute;
+    content: "";
+    left: 20px;
+    margin-top: -12px;
+    background-image: url("../img/logo-mobile.svg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 33px;
+    height: 37px;
   }
 }

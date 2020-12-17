@@ -27,6 +27,24 @@
 
 .invitation__wrapper--grey {
   background-color: @basic_grey;
+
+  @media (max-width: @mobile-width-only) {
+    padding: 27px 19px 26px 20px;
+  }
+
+  @media (min-width: @tablet-width) {
+    padding: 64px 82px 38px 72px;
+    margin-top: -5px;
+  }
+
+  @media (min-width: @desktop-width) {
+    position: absolute;
+    left: 110px;
+    margin-top: 95px;
+    padding: 66px 89px 63px 76px;
+    width: 570px;
+    box-sizing: border-box;
+  }
 }
 
 .invitation__title {

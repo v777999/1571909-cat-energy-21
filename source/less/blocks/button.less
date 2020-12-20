@@ -2,7 +2,7 @@
   display: block;
   width: 100%;
   padding: 10px 20px;
-  font: 16px;
+  font-size: 16px;
   line-height: 20px;
   font-family: "Oswald", sans-serif;
   text-decoration: none;
@@ -21,13 +21,20 @@
     background-color: @basic_green-2;
     color: fade(@basic_white, 30%);
   }
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 0;
+    padding-top: 25px;
+    padding-bottom: 25px;
+  }
 }
 
 .show-all__button {
   display: block;
   padding: 10px 20px;
   box-sizing: border-box;
-  font: 16px;
+  font-size: 16px;
   line-height: 20px;
   font-family: "Oswald", sans-serif;
   text-decoration: none;

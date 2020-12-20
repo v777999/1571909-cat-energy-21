@@ -11,6 +11,7 @@
   @media (min-width: @tablet-width) {
     padding: 64px 82px 38px 72px;
     margin-top: -5px;
+    margin-bottom: 2px;
     background-color: @basic_white;
   }
 
@@ -27,6 +28,25 @@
 
 .invitation__wrapper--grey {
   background-color: @basic_grey;
+
+  @media (max-width: @mobile-width-only) {
+    padding: 27px 19px 26px 20px;
+  }
+
+  @media (min-width: @tablet-width) {
+    padding: 64px 72px 36px 72px;
+    margin-top: -5px;
+  }
+
+  @media (min-width: @desktop-width) {
+    background-color: @basic_white;
+    position: absolute;
+    left: 110px;
+    margin-top: 95px;
+    padding: 64px 89px 63px 76px;
+    width: 570px;
+    box-sizing: border-box;
+  }
 }
 
 .invitation__title {
@@ -54,7 +74,7 @@
     font-size: 20px;
     line-height: 21px;
     width: 171px;
-    padding-top: 0;
+    padding-top: 2px;
   }
 }
 
@@ -79,13 +99,18 @@
     display: block;
     font-size: 20px;
     line-height: 19px;
-    padding-top: 25px;
+    padding-top: 27px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 26px;
   }
 }
 
 .invitation__address {
   margin: 0;
   padding: 0;
+  padding-top: 2px;
   width: 140px;
   font-size: 14px;
   line-height: 20px;
@@ -96,7 +121,7 @@
     position: relative;
     font-size: 16px;
     line-height: 20px;
-    margin-top: -3px;
+    margin-top: -2px;
     margin-bottom: 20px;
     width: 159px;
     text-align: right;
@@ -106,13 +131,14 @@
     position: absolute;
     text-align: left;
     margin-left: 250px;
+    margin-top: -4px;
   }
 }
 
 .invitation__address-town {
   @media (min-width: @tablet-width) {
     display: block;
-    margin-top: 21px;
+    margin-top: 20px;
   }
 
   @media (min-width: @desktop-width) {
@@ -122,6 +148,7 @@
 
 .invitation__map {
   margin: 0;
+  margin-top: -2px;
   padding: 0;
   background-image: url("../img/location-mobile.jpg");
   width: 100%;
@@ -142,5 +169,6 @@
     background-repeat: no-repeat;
     width: auto;
     height: 400px;
+    margin-top: 2px;
   }
 }

@@ -10,28 +10,51 @@
 </head>
 
 <body class="page__body">
-  <header class="form__page-header">
-    <div class="page-header__wrappe">
-      <nav class="main-nav main-nav--closed main-nav--nojs">
-        <div class="main-nav__wrapper">
-          <a class="page-header__logo">
-            <img src="img/logotype-name-mobile.svg" width="101" height="18" alt="Логотип Кэт энерджи">
-          </a>
-          <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
-          <ul class="main-nav__list site-list site-list--form">
-            <li class="site-list__item">
-              <a href="index.html">Главная</a>
-            </li>
-            <li class="site-list__item">
-              <a href="catalog.html">Каталог продукции</a>
-            </li>
-            <li class="site-list__item site-list__item--active">
-              <a>Подбор программы</a>
-            </li>
-          </ul>
-        </div>
-      </nav>
-    </div>
+  <svg style="display: none">
+    <symbol id="icon_facebook" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path
+        d="M16.5 1.833h-2.75a4.63 4.63 0 00-3.24 1.317 4.45 4.45 0 00-1.343 3.177v2.697h-2.75v3.595h2.75v7.191h3.666v-7.19h2.75l.917-3.596h-3.667V6.327a.89.89 0 01.269-.635.926.926 0 01.648-.263h2.75V1.833z"
+        stroke="#666" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round" />
+    </symbol>
+    <symbol id="icon_instagram" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path
+        d="M7.98438 0.0625C9.31771 0.0625 10.4062 0.078125 11.25 0.109375C11.9688 0.140625 12.6094 0.265625 13.1719 0.484375C13.7135 0.692708 14.1823 0.994792 14.5781 1.39062C14.974 1.78646 15.276 2.25521 15.4844 2.79687C15.7031 3.35937 15.8281 4 15.8594 4.71875C15.8906 5.5625 15.9062 6.65104 15.9062 7.98437C15.9062 9.31771 15.8906 10.4062 15.8594 11.25C15.8281 11.9687 15.7031 12.6094 15.4844 13.1719C15.276 13.7135 14.974 14.1823 14.5781 14.5781C14.1823 14.974 13.7135 15.276 13.1719 15.4844C12.6094 15.7031 11.9688 15.8281 11.25 15.8594C10.4062 15.8906 9.31771 15.9062 7.98438 15.9062C6.65104 15.9062 5.5625 15.8906 4.71875 15.8594C4 15.8281 3.35938 15.7031 2.79688 15.4844C2.25521 15.276 1.78646 14.974 1.39062 14.5781C0.994792 14.1823 0.692708 13.7135 0.484375 13.1719C0.265625 12.6094 0.140625 11.9687 0.109375 11.25C0.078125 10.4062 0.0625 9.31771 0.0625 7.98437C0.0625 6.65104 0.078125 5.5625 0.109375 4.71875C0.140625 4 0.265625 3.35937 0.484375 2.79687C0.692708 2.25521 0.994792 1.78646 1.39062 1.39062C1.78646 0.994792 2.25521 0.692708 2.79688 0.484375C3.35938 0.265625 4 0.140625 4.71875 0.109375C5.5625 0.078125 6.65104 0.0625 7.98438 0.0625ZM7.98438 1.09375C6.59896 1.09375 5.46875 1.10937 4.59375 1.14062C4.03125 1.16146 3.51042 1.26042 3.03125 1.4375C2.28125 1.75 1.75 2.28125 1.4375 3.03125C1.26042 3.51042 1.16146 4.03125 1.14062 4.59375C1.10938 5.46875 1.09375 6.59896 1.09375 7.98437C1.09375 9.36979 1.10938 10.5 1.14062 11.375C1.16146 11.9375 1.26042 12.4583 1.4375 12.9375C1.75 13.6875 2.28125 14.2187 3.03125 14.5312C3.51042 14.7083 4.03125 14.8073 4.59375 14.8281C5.46875 14.8594 6.59896 14.875 7.98438 14.875C9.36979 14.875 10.5 14.8594 11.375 14.8281C11.9375 14.8073 12.4583 14.7083 12.9375 14.5312C13.6875 14.2187 14.2188 13.6875 14.5312 12.9375C14.7083 12.4583 14.8073 11.9375 14.8281 11.375C14.8594 10.5 14.875 9.36979 14.875 7.98437C14.875 6.59896 14.8594 5.46875 14.8281 4.59375C14.8073 4.03125 14.7083 3.51042 14.5312 3.03125C14.2188 2.28125 13.6875 1.75 12.9375 1.4375C12.4583 1.26042 11.9375 1.16146 11.375 1.14062C10.5 1.10937 9.36979 1.09375 7.98438 1.09375ZM7.98438 11.1562C8.85938 11.1562 9.60677 10.8464 10.2266 10.2266C10.8464 9.60677 11.1562 8.85937 11.1562 7.98437C11.1562 7.10937 10.8464 6.36198 10.2266 5.74219C9.60677 5.1224 8.85938 4.8125 7.98438 4.8125C7.10938 4.8125 6.36198 5.1224 5.74219 5.74219C5.1224 6.36198 4.8125 7.10937 4.8125 7.98437C4.8125 8.85937 5.1224 9.60677 5.74219 10.2266C6.36198 10.8464 7.10938 11.1562 7.98438 11.1562ZM7.98438 3.92187C9.10938 3.92187 10.0677 4.31771 10.8594 5.10937C11.651 5.90104 12.0469 6.85937 12.0469 7.98437C12.0469 9.10937 11.651 10.0677 10.8594 10.8594C10.0677 11.651 9.10938 12.0469 7.98438 12.0469C6.85938 12.0469 5.90104 11.651 5.10938 10.8594C4.31771 10.0677 3.92188 9.10937 3.92188 7.98437C3.92188 6.85937 4.31771 5.90104 5.10938 5.10937C5.90104 4.31771 6.85938 3.92187 7.98438 3.92187ZM13.1719 3.76562C13.1719 4.02604 13.0781 4.2474 12.8906 4.42969C12.7031 4.61198 12.474 4.70312 12.2031 4.70312C11.9427 4.70312 11.7214 4.61198 11.5391 4.42969C11.3568 4.2474 11.2656 4.02604 11.2656 3.76562C11.2656 3.49479 11.3568 3.26562 11.5391 3.07812C11.7214 2.89062 11.9427 2.79687 12.2031 2.79687C12.4635 2.79687 12.6901 2.89323 12.8828 3.08594C13.0755 3.27865 13.1719 3.50521 13.1719 3.76562Z"
+        fill="#666666" />
+    </symbol>
+    <symbol id="icon_vkontakte" viewBox="0 0 23 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path
+        d="M.07 3.993c0-.622.423-.957 1.27-1.006l3.26.018c.22 0 .365.091.438.274.336.915.711 1.704 1.127 2.369.416.664.96 1.43 1.63 2.295.059.11.154.165.285.165a.276.276 0 00.24-.128l.067-.201.021-3.165c0-.219-.062-.365-.186-.438-.124-.074-.353-.128-.689-.165-.263-.037-.394-.17-.394-.402 0-.05.007-.086.022-.11.306-.793 1.182-1.189 2.626-1.189l1.226-.018c.554 0 1.014.116 1.379.347.364.232.547.598.547 1.098v4.151a.562.562 0 00.284.092c.22 0 .409-.11.57-.33 1.604-1.877 2.472-3.133 2.604-3.767a.29.29 0 01.044-.092c.102-.182.27-.34.503-.475.233-.134.438-.226.613-.274a.507.507 0 01.197-.037h3.392l.219.018c.292 0 .518.116.678.348a.63.63 0 01.12.238c.022.085.037.17.044.256.008.085.011.134.011.146v.128c-.102.5-.36 1.033-.777 1.6-.415.567-.944 1.18-1.586 1.838-.642.659-1.044 1.092-1.204 1.299-.131.146-.197.28-.197.402 0 .098.058.208.175.33l3.195 3.365a.939.939 0 01.263.64c0 .28-.131.512-.394.695a1.826 1.826 0 01-.941.31l-.372.02h-3.327a.794.794 0 00-.087.008.802.802 0 01-.088.01c-.32 0-.62-.116-.897-.348-.102-.098-.788-.817-2.057-2.158a1.106 1.106 0 00-.307-.238c-.058.195-.135.475-.23.841-.094.366-.164.628-.207.787l-.066.31c-.146.427-.452.684-.92.769l-.306.018H9.743c-1.21 0-2.418-.463-3.622-1.39-1.203-.927-2.287-2.124-3.25-3.594-.963-1.469-1.86-3.18-2.691-5.13a1.254 1.254 0 01-.11-.53zM13.223 8.73a1.66 1.66 0 01-.831-.21c-.248-.14-.372-.333-.372-.577V3.737c0-.244-.073-.418-.22-.522-.145-.103-.4-.155-.765-.155l-1.248.036c-.627 0-1.101.092-1.422.275.642.256.963.67.963 1.243v3.22c-.03.304-.175.557-.438.758a1.405 1.405 0 01-.875.302c-.438 0-.774-.177-1.007-.53C5.87 6.925 5.024 5.559 4.469 4.267l-.197-.476-2.91-.018c-.19 0-.296.01-.318.028-.022.018-.033.07-.033.155 0 .11.015.226.044.348l.46 1.024c1.225 2.646 2.556 4.73 3.994 6.255 1.437 1.524 2.848 2.286 4.234 2.286h2.189c.088 0 .153-.021.197-.064.044-.043.08-.125.11-.247l.043-.183.416-1.61c.117-.219.219-.365.306-.438a.86.86 0 01.57-.201c.35 0 .707.176 1.072.53l1.86 1.975c.117.159.24.238.372.238h3.611c.438 0 .657-.091.657-.274a.312.312 0 00-.066-.183l-3.173-3.31c-.248-.257-.372-.531-.372-.824 0-.292.116-.573.35-.841.19-.244.558-.65 1.105-1.216a28.203 28.203 0 001.434-1.591c.408-.494.678-.942.81-1.345l.065-.237a.243.243 0 01-.022-.12c0-.054-.007-.1-.022-.137H17.82a1.199 1.199 0 00-.525.33l-.131.347c-.365.841-1.32 2.14-2.867 3.896a1.672 1.672 0 01-1.073.366z"
+        fill="#666" />
+    </symbol>
+    <symbol id="icon_arrow" width="32" height="12" viewBox="0 0 32 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <line y1="6" x2="18" y2="6" stroke="black" stroke-width="2" />
+      <path d="M24 6L17.25 11.1962L17.25 0.803848L24 6Z" fill="black" />
+    </symbol>
+  </svg>
+
+  <header class="page-header">
+    <nav class="main-nav main-nav--closed main-nav--nojs">
+      <div class="main-nav__wrapper">
+        <a class="mobile-logo"></a>
+        <picture>
+          <source media="(min-width: 1440px)" srcset="img/logo-desktop-full.svg">
+          <source media="(min-width: 768px)" srcset="img/logo-tablet-full.svg">
+          <img class="page-header__logo" src="img/logotype-name-mobile.svg" width="101" height="18" alt="Логотип Кэт энерджи">
+        </picture>
+        <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
+        <ul class="main-nav__list site-list">
+          <li class="site-list__item">
+            <a href="index.html">Главная</a>
+          </li>
+          <li class="site-list__item">
+            <a href="catalog.html">Каталог продукции</a>
+          </li>
+          <li class="site-list__item site-list__item--active">
+            <a href="#">Подбор программы</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
   </header>
 
   <main class="form__page-main">
@@ -39,7 +62,7 @@
     <section class="form-request">
       <div class="form-request__wrapper">
         <h1 class="form__page-title">Подбор программы</h1>
-        <h2 class="form__title">Заполните анкету, и мы подберем программу питания для вашего кота</h2>
+        <h2 class="form__title">Заполните анкету, и мы подберем<br> программу питания для вашего кота</h2>
         <form class="form__filter" method="GET" action="https://echo.htmlacademy.ru">
           <div class="filter__wrapper">
             <fieldset class="filter__client">
@@ -50,11 +73,11 @@
                   <input class="filter__client-input" id="client-name" type="text" placeholder="Барсик" required>
                 </li>
                 <li class="filter__client-item">
-                  <label class="filter__client-label" for="client-weight">Вес(кг):*</label>
+                  <label class="filter__client-label" for="client-weight">Вес (кг):*</label>
                   <input class="filter__client-input" id="client-weight" type="text" placeholder="7" required>
                 </li>
                 <li class="filter__client-item">
-                  <label class="filter__client-label" for="client-age">Возраст(лет):</label>
+                  <label class="filter__client-label" for="client-age">Возраст (лет):</label>
                   <input class="filter__client-input" id="client-age" type="text" placeholder="7">
                 </li>
               </ul>
@@ -63,22 +86,22 @@
               <legend class="visually-hidden">Цели программы</legend>
               <ul class="filter__target-list">
                 <li class="filter__target-item filter__radio">
-                  <input class="filter__target-input" type="radio" name="target-group" id="slim-target" checked>
+                  <input class="filter__target-input visually-hidden" type="radio" name="target-group" id="slim-target" checked>
                   <label class="filter__target-label filter__target-label--active" for="slim-target">Похудение</label>
                 </li>
                 <li class="filter__target-item filter__radio">
-                  <input class="filter__target-input" type="radio" name="target-group" id="weight-target">
+                  <input class="filter__target-input visually-hidden" type="radio" name="target-group" id="weight-target">
                   <label class="filter__target-label" for="weight-target">Набор массы</label>
                 </li>
                 <li class="filter__target-item filter__radio">
-                  <input class="filter__target-input" type="radio" name="target-group" id="unknown-target">
+                  <input class="filter__target-input visually-hidden" type="radio" name="target-group" id="unknown-target">
                   <label class="filter__target-label" for="unknown-target">Не знаю (Нужен ваш совет)</label>
                 </li>
               </ul>
             </fieldset>
           </div>
           <fieldset class="filter__contacts">
-            <legend class="filter__contacts-legend">Контактные данные (владельца кота)</legend>
+            <h2 class="filter__contacts-legend">Контактные данные <br>(владельца кота)</h2>
             <ul class="filter__contacts-list">
               <li class="filter__contacts-item">
                 <label class="filter__contacts-label filter__contacts-label--active" for="email-field">E-mail:*</label>
@@ -93,30 +116,30 @@
             </ul>
           </fieldset>
           <fieldset class="filter__comment">
-            <legend class="filter__comment-legend">Комментарий</legend>
+            <h2 class="filter__comment-legend">Комментарий</h2>
             <div class="filter__comment-wrapper">
-              <textarea class="filter__comment-text" name="comment" id="comment-field" rows="7"
+              <textarea class="filter__comment-text" name="comment" id="comment-field" rows="5"
                 placeholder="Расскажите обо всех повадках кота"></textarea>
             </div>
           </fieldset>
           <fieldset class="filter__extra">
-            <legend class="filter__extra-legend">Дополнительно</legend>
+            <h2 class="filter__extra-legend">Дополнительно</h2>
             <ul class="filter__extra-list">
               <li class="filter__extra-item filter__extra-checkbox">
-                <input class="filter__extra-input" id="sweetener-field" type="checkbox" checked>
+                <input class="filter__extra-input visually-hidden" id="sweetener-field" type="checkbox" checked>
                 <label class="filter__extra-label filter__extra-label--active"
                   for="sweetener-field">Cахарозаменитель</label>
               </li>
               <li class="filter__extra-item filter__extra-checkbox">
-                <input class="filter__extra-input" id="water-field" type="checkbox">
+                <input class="filter__extra-input visually-hidden" id="water-field" type="checkbox">
                 <label class="filter__extra-label" for="water-field">Питьевая вода</label>
               </li>
               <li class="filter__extra-item filter__extra-checkbox">
-                <input class="filter__extra-input" id="milk-field" type="checkbox">
+                <input class="filter__extra-input visually-hidden" id="milk-field" type="checkbox">
                 <label class="filter__extra-label" for="milk-field">Молоко</label>
               </li>
               <li class="filter__extra-item filter__extra-checkbox">
-                <input class="filter__add-input" id="vitamins-field" type="checkbox">
+                <input class="filter__add-input visually-hidden" id="vitamins-field" type="checkbox">
                 <label class="filter__extra-label" for="vitamins-field">Витамины</label>
               </li>
             </ul>
@@ -132,9 +155,11 @@
 
   <footer class="page-footer">
     <section class="invitation">
-      <div class="invitation__wrapper">
-        <h2 class="invitation__title">Приглашаем<br>к сотрудничеству дилеров!</h2>
-        <p class="invitation__address">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
+      <div class="invitation__wrapper invitation__wrapper--grey">
+        <h2 class="invitation__title">Приглашаем<br><span class="invitation__title-second">к сотрудничеству</span>
+          <span class="invitation__title-diler">дилеров!</span></h2>
+        <p class="invitation__address">ул. Большая Конюшенная, д. 19/8 <span
+            class="invitation__address-town">Санкт-Петербург</span></p>
       </div>
       <div class="invitation__map"></div>
     </section>
@@ -143,10 +168,21 @@
         <img src="img/logotype-name-mobile.svg" width="128" height="24" alt="Кэт энерджи">
       </a>
       <div class="page-footer__social social">
-        <a class="social__link social__link--vkontakte" href="https://vk.com/htmlacademy">Мы в Вконтакте</a>
-        <a class="social__link social__link--instagram" href="https://www.instagram.com/htmlacademy">Мы в
+        <a class="social__link social__link--vkontakte visually-hidden" href="https://vk.com/htmlacademy">Мы в
+          Вконтакте</a>
+        <svg class="social-vkontakte" width="23" height="16">
+          <use xlink:href="#icon_vkontakte">
+        </svg>
+        <a class="social__link social__link--instagram visually-hidden" href="https://vk.com/htmlacademy">Мы в
           Инстаграме</a>
-        <a class="social__link social__link--facebook" href="https://www.facebook.com/htmlacademy">Мы в Фейсбуке</a>
+        <svg class="social-instagram" width="16" height="16">
+          <use xlink:href="#icon_instagram">
+        </svg>
+        <a class="social__link social__link--facebook visually-hidden" href="https://vk.com/htmlacademy">Мы в
+          Фейсбуке</a>
+        <svg class="social-facebook" width="22" height="22">
+          <use xlink:href="#icon_facebook">
+        </svg>
       </div>
       <a class="page-footer__copyright" href="https://htmlacademy.ru/intensive/adaptive" target="_blank">
         <span class="copyright__text">HTML Academy</span>

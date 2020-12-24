@@ -3,6 +3,11 @@
   width: auto;
   min-height: 66px;
   //background-color: @basic_white;
+  border-bottom: 1px solid @border_line;
+
+  @media (min-width: @tablet-width) {
+    border-bottom: none;
+  }
 }
 
 .main-nav__list {
@@ -13,7 +18,7 @@
 
 .main-nav__wrapper {
   position: relative;
-  padding-top: 25px;
+  padding-top: 23px;
 
   @media (min-width: @tablet-width) {
     padding: 0 0 0 30px;

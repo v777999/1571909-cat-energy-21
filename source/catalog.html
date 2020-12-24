@@ -35,8 +35,8 @@
       <line x1="30" y1="15" y2="15" stroke="#D3D3D3" stroke-width="2" />
     </symbol>
     <symbol id="plus-tablet" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <line x1="31" x2="31" y2="60" stroke="#D3D3D3" stroke-width="2"/>
-      <line x1="60" y1="31" y2="31" stroke="#D3D3D3" stroke-width="2"/>
+      <line x1="31" x2="31" y2="60" stroke="#D3D3D3" stroke-width="2" />
+      <line x1="60" y1="31" y2="31" stroke="#D3D3D3" stroke-width="2" />
     </symbol>
     <symbol id="gift" viewBox="0 0 78 80" fill="none" xmlns="http://www.w3.org/2000/svg">
       <path
@@ -76,10 +76,10 @@
             <a href="index.html">Главная</a>
           </li>
           <li class="site-list__item site-list__item--active">
-            <a href="#">Каталог продукции</a>
+            <a>Каталог продукции</a>
           </li>
           <li class="site-list__item">
-            <a href="#">Подбор программы</a>
+            <a href="form.html">Подбор программы</a>
           </li>
         </ul>
       </div>
@@ -109,6 +109,7 @@
                 <tr>
                   <td class="data__caption" colspan="2">Cat Energy PRO 500 г</td>
                 </tr>
+                <tr>
                 <td class="data__name">Масса</td>
                 <td class="data__value">500 г</td>
                 </tr>
@@ -142,7 +143,6 @@
               <table class="catalog__list-item-data">
                 <tr>
                   <td class="data__caption" colspan="2">Cat Energy PRO 1000 г</td>
-                </tr>
                 </tr>
                 <tr>
                   <td class="data__name">Масса</td>
@@ -335,16 +335,18 @@
               <button class="button__global catalog__button-order" type="button">Заказать</button>
             </div>
           </li>
-          <div class="show-all-wrapper">
+          <li class="show-all-wrapper">
             <section class="show-all">
               <svg class="plus" width="30" height="30">
                 <use href="#plus-tablet"></use>
               </svg>
               <h3 class="show-all__title">Показать еще 100500 товаров</h3>
               <p class="show-all__description">На самом деле вкусов гораздо больше!</p>
-              <a class="show-all__button" href="">Показать все</a>
+              <div class="show-all__button-wrapper">
+                <a class="show-all__button" href="">Показать все</a>
+              </div>
             </section>
-          </div>
+          </li>
         </ul>
       </div>
     </section>
@@ -417,9 +419,7 @@
         </div>
       </div>
     </section>
-    <!--  <section class="bonus">
-    </section>
-  -->
+
   </main>
   <footer class="page-footer">
     <section class="invitation">

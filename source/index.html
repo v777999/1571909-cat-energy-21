@@ -5,15 +5,17 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>HTML Academy: Кэт энерджи</title>
+  <link rel="preload" href="fonts/oswaldregular.woff2" as="font">
+  <link rel="preload" href="fonts/oswaldmedium.woff2" as="font">
   <link rel="stylesheet" href="css/normalize.min.css">
   <link rel="stylesheet" href="css/style.min.css">
 </head>
 
 <body class="page__body">
   <svg style="display: none">
-    <symbol id="icon_facebook" fill="none" viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg">
+    <symbol id="icon_facebook" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
       <path
-        d="M21 2.75h-3.5c-1.547 0-3.03.71-4.125 1.974-1.094 1.265-1.708 2.98-1.708 4.767v4.045h-3.5v5.393h3.5v10.786h4.666V18.93h3.5L21 13.536h-4.667V9.491c0-.357.123-.7.342-.953.219-.253.516-.395.825-.395H21V2.75z"
+        d="M16.5 1.833h-2.75a4.63 4.63 0 00-3.24 1.317 4.45 4.45 0 00-1.343 3.177v2.697h-2.75v3.595h2.75v7.191h3.666v-7.19h2.75l.917-3.596h-3.667V6.327a.89.89 0 01.269-.635.926.926 0 01.648-.263h2.75V1.833z"
         stroke="#666" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round" />
     </symbol>
     <symbol id="icon_instagram" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -61,14 +63,14 @@
         </picture>
 
         <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
-        <ul class="main-nav__list site-list">
-          <li class="site-list__item site-list__item--active">
-            <a>Главная</a>
+        <ul class="main-nav__list site-list site-list__index">
+          <li class="site-list__item site-list__item--index site-list__item--active">
+            <a href="">Главная</a>
           </li>
-          <li class="site-list__item">
+          <li class="site-list__item site-list__item--index">
             <a href="catalog.html">Каталог продукции</a>
           </li>
-          <li class="site-list__item">
+          <li class="site-list__item site-list__item--index">
             <a href="form.html">Подбор программы</a>
           </li>
         </ul>
@@ -89,14 +91,15 @@
                 srcset="img/index-can-desktop.webp 1x, img/index-can-desktop@2x.webp 2x">
               <source type="image/webp" media="(min-width: 768px)"
                 srcset="img/index-can-tablet-1.webp 1x, img/index-can-tablet-1@2x.webp 2x">
-              <source type="image/webp" srcset="img/index-can-mobile-1.webp 1x, img/index-can-mobile1@2x.webp 2x">
+              <source type="image/webp" srcset="img/index-can-mobile-1.webp 1x, img/index-can-mobile-1@2x.webp 2x">
               <source media="(min-width: 1440px)"
                 srcset="img/index-can-desktop.png 1x, img/index-can-desktop@2x.png 2x">
               <source media="(min-width: 768px)"
                 srcset="img/index-can-tablet-1.png 1x, img/index-can-tablet-1@2x.png 2x">
-              <img class="promo__image" src="img/index-can-mobile-1.png" srcset="img/index-can-mobile1@2x.png 2x"
+              <img class="promo__image" src="img/index-can-mobile-1.png" srcset="img/index-can-mobile-1@2x.png 2x"
                 alt="Cat Energy Pro Курица">
             </picture>
+
           </a>
         </div>
         <a class="promo__button" href="form.html">Подобрать программу</a>

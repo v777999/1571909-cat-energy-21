@@ -7,7 +7,7 @@
   <title>HTML Academy: Кэт энерджи</title>
   <link rel="preload" href="fonts/oswaldregular.woff2" as="font">
   <link rel="preload" href="fonts/oswaldmedium.woff2" as="font">
-  <link rel="stylesheet" href="css/normalize.min.css">
+  <!-- <link rel="stylesheet" href="css/normalize.min.css"> -->
   <link rel="stylesheet" href="css/style.min.css">
 </head>
 
@@ -58,8 +58,7 @@
         <picture>
           <source media="(min-width: 1440px)" srcset="img/logo-desktop-full.svg">
           <source media="(min-width: 768px)" srcset="img/logo-tablet-full.svg">
-          <img class="page-header__logo" src="img/logotype-name-mobile.svg" width="101" height="18"
-            alt="Логотип Кэт энерджи">
+          <img class="page-header__logo" src="img/logotype-name-mobile.svg" alt="Логотип Кэт энерджи">
         </picture>
 
         <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
@@ -233,22 +232,8 @@
     </div>
   </footer>
 
-  <script>
-    var navMain = document.querySelector('.main-nav');
-    var navToggle = document.querySelector('.main-nav__toggle');
-
-    navMain.classList.remove('main-nav--nojs');
-
-    navToggle.addEventListener('click', function () {
-      if (navMain.classList.contains('main-nav--closed')) {
-        navMain.classList.remove('main-nav--closed');
-        navMain.classList.add('main-nav--opened');
-      } else {
-        navMain.classList.add('main-nav--closed');
-        navMain.classList.remove('main-nav--opened');
-      }
-    });
-  </script>
+  <!-- <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=8b218d93-82f5-460e-b613-21e5495d6f21"></script> -->
+  <script src="js/script.min.js"></script>
 </body>
 
 </html>

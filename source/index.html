@@ -78,6 +78,7 @@
     </nav>
   </header>
   <main class="page-main">
+
     <section class="promo">
       <div class="promo__wrapper">
         <div class="promo__text-wrapper">
@@ -104,6 +105,7 @@
         <a class="promo__button" href="form.html">Подобрать программу</a>
       </div>
     </section>
+
     <div class="programs__wrapper">
       <section class="programs">
         <h2 class="visually-hidden">Выбор программы питания</h2>
@@ -235,22 +237,7 @@
   </footer>
 
   <!-- <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=8b218d93-82f5-460e-b613-21e5495d6f21"></script> -->
-  <script>
-    var navMain = document.querySelector('.main-nav');
-    var navToggle = document.querySelector('.main-nav__toggle');
-
-    navMain.classList.remove('main-nav--nojs');
-
-    navToggle.addEventListener('click', function () {
-      if (navMain.classList.contains('main-nav--closed')) {
-        navMain.classList.remove('main-nav--closed');
-        navMain.classList.add('main-nav--opened');
-      } else {
-        navMain.classList.add('main-nav--closed');
-        navMain.classList.remove('main-nav--opened');
-      }
-    });
-  </script>
+  <script src="js/script.min.js"></script>
 </body>
 
 </html>

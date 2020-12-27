@@ -53,23 +53,24 @@
   <header class="page-header">
     <nav class="main-nav main-nav--closed main-nav--nojs">
       <div class="main-nav__wrapper">
-        <a class="mobile-logo"></a>
-
-        <picture>
-          <source media="(min-width: 1440px)" srcset="img/logo-desktop-full.svg">
-          <source media="(min-width: 768px)" srcset="img/logo-tablet-full.svg">
-          <img class="page-header__logo" src="img/logotype-name-mobile.svg" alt="Логотип Кэт энерджи">
-        </picture>
-
+        <a href="#" class="logo-container">
+          <a class="mobile-logo"></a>
+          <picture>
+            <source media="(min-width: 1440px)" srcset="img/logo-desktop-full.svg">
+            <source media="(min-width: 768px)" srcset="img/logo-tablet-full.svg">
+            <img class="page-header__logo" src="img/logotype-name-mobile.svg" width="101" height="18"
+              alt="Логотип Кэт энерджи">
+          </picture>
+        </a>
         <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
         <ul class="main-nav__list site-list site-list__index">
-          <li class="site-list__item site-list__item--index site-list__item--active">
+          <li class="site-list__item-index site-list__item-index--active">
             <a href="">Главная</a>
           </li>
-          <li class="site-list__item site-list__item--index">
+          <li class="site-list__item-index">
             <a href="catalog.html">Каталог продукции</a>
           </li>
-          <li class="site-list__item site-list__item--index">
+          <li class="site-list__item-index">
             <a href="form.html">Подбор программы</a>
           </li>
         </ul>
@@ -98,7 +99,6 @@
               <img class="promo__image" src="img/index-can-mobile-1.png" srcset="img/index-can-mobile-1@2x.png 2x"
                 alt="Cat Energy Pro Курица">
             </picture>
-
           </a>
         </div>
         <a class="promo__button" href="form.html">Подобрать программу</a>
@@ -181,11 +181,13 @@
           <img class="example__image" src="img/before-mobile-1.png" srcset="img/before-mobile-1@2x.png 2x"
             alt="Кот до похудения">
         </picture>
-        <p class="example__slider-toggles">
+        <div class="example__slider-toggles">
           <button class="example__slider-toggle--before example__slider-toggle--current" type="button">Было</button>
+          <div class="slider-controller">
+            <!-- <img src="img/slider_mobile.svg" width="84" height="14" alt=""> -->
+          </div>
           <button class="example__slider-toggle--after" type="button">Стало</button>
-        </p>
-      </div>
+        </div>
     </section>
   </main>
 
@@ -233,7 +235,22 @@
   </footer>
 
   <!-- <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=8b218d93-82f5-460e-b613-21e5495d6f21"></script> -->
-  <script src="js/script.min.js"></script>
+  <script>
+    var navMain = document.querySelector('.main-nav');
+    var navToggle = document.querySelector('.main-nav__toggle');
+
+    navMain.classList.remove('main-nav--nojs');
+
+    navToggle.addEventListener('click', function () {
+      if (navMain.classList.contains('main-nav--closed')) {
+        navMain.classList.remove('main-nav--closed');
+        navMain.classList.add('main-nav--opened');
+      } else {
+        navMain.classList.add('main-nav--closed');
+        navMain.classList.remove('main-nav--opened');
+      }
+    });
+  </script>
 </body>
 
 </html>

@@ -99,6 +99,15 @@
   }
 }
 
+.logo-container:hover .page-header__logo {
+  cursor: default;
+
+  @media (min-width: @desktop-width) {
+    opacity: 0.7;
+    cursor: pointer;
+  }
+}
+
 .mobile-logo::before {
   @media (max-width: @mobile-width-only) {
     position: absolute;

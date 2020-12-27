@@ -3,7 +3,7 @@
 
   @media (max-width: @mobile-width-only) {
     margin-top: 22px;
-    z-index: 9999;
+    /* z-index: 9999; */
   }
 
   @media (min-width: @tablet-width) {
@@ -83,6 +83,63 @@
   }
 }
 
+.site-list__item-index {
+  @media (min-width: @tablet-width) {
+    &:first-child {
+      margin-right: 32px;
+    }
+
+    &:last-child {
+      margin-right: 0;
+      margin-left: 36px;
+    }
+
+    &--active {
+      position: relative;
+
+      &::after {
+        content: "";
+        position: absolute;
+        top: 70px;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        height: 2px;
+        background: @basic_green; // current menu item underline
+      }
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-right: 32px;
+
+    &:first-child {
+      margin-left: -3px;
+      margin-right: 36px;
+    }
+
+    &:last-child {
+      margin-right: 0;
+      margin-left: 1px;
+    }
+
+    &--active {
+      position: relative;
+
+      &::after {
+        content: "";
+        position: absolute;
+        top: 75px;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        height: 2px;
+        background: @basic_white; // current menu item underline
+      }
+    }
+  }
+}
+
 .site-list__item--index a[href] {
   @media (min-width: @desktop-width) {
     &:hover {
@@ -92,11 +149,17 @@
 
     &:active {
       color: @basic_white;
+      opacity: 1;
+    }
+
+    &:focus {
+      color: @basic_white;
+      opacity: 0.3;
     }
   }
 }
 
-/* .site-list__item a[href] {
+.site-list__item a[href] {
   @media (min-width: @tablet-width) {
     &:hover {
       color: @basic_black;
@@ -107,7 +170,24 @@
       color: @basic_black;
     }
   }
-} */
+
+  @media (min-width: @desktop-width) {
+    &:hover {
+      color: @basic_black;
+      opacity: 0.7;
+    }
+
+    &:active {
+      color: @basic_black;
+      opacity: 1;
+    }
+
+    &:focus {
+      color: @basic_black;
+      opacity: 0.3;
+    }
+  }
+}
 
 .site-list__item:last-child a {
   border-bottom: 1px solid @border_line;
@@ -162,13 +242,19 @@
     }
 
     &:hover {
-      color: @basic_white;
-      opacity: 0.3;
+      color: @basic_black;
+      opacity: 0.7;
+      cursor: pointer;
     }
 
     &:active {
-      color: @basic_white;
+      color: @basic_black;
       opacity: 1;
+    }
+
+    &:focus {
+      color: @basic_black;
+      opacity: 0.3;
     }
   }
 }

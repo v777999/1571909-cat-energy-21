@@ -322,3 +322,18 @@
     margin-left: 520px;
   }
 }
+
+.slider-controller {
+  @media (max-width: @mobile-width-only) {
+    margin-top: 5px;
+    background-image: url("../img/slider_mobile.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 84px;
+    height: 14px;
+  }
+
+  @media (min-width: @desktop-width) {
+    background-image: none;
+  }
+}

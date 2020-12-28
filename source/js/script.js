@@ -22,7 +22,7 @@ var navMain = document.querySelector('.main-nav');
       myPlacemark = new ymaps.Placemark([59.938635, 30.323118], {}, {
         iconLayout: 'default#image',
         iconImageHref: '../img/map-pin.png',
-        iconImageSize: [57, 53],
+        iconImageSize: [113, 106],
       });
       myMap.geoObjects.add(myPlacemark);
     };

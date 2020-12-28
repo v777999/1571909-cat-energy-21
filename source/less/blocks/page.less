@@ -80,6 +80,17 @@
 }
 
 .page-header__logo {
+  z-index: 3;
+
+  &:hover {
+    opacity: 0.7;
+    cursor: pointer;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
   @media (min-width: @tablet-width) {
     position: absolute;
     display: block;
@@ -96,15 +107,6 @@
     left: 0;
     width: 202px;
     height: 59px;
-  }
-}
-
-.logo-container:hover .page-header__logo {
-  cursor: default;
-
-  @media (min-width: @desktop-width) {
-    opacity: 0.7;
-    cursor: pointer;
   }
 }
 

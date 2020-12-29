@@ -24,6 +24,14 @@
   padding-bottom: 29px;
   border-bottom: 1px solid @border_line;
 
+  &:hover {
+    opacity: 0.7;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
   @media (min-width: @tablet-width) {
     margin-top: 21px;
     margin-left: 10px;
@@ -61,6 +69,20 @@
 
 .social__link {
   text-decoration: none;
+}
+
+.social-vkontakte,
+.social-instagram,
+.social-facebook {
+  &:hover {
+    color: @basic_green;
+    cursor: pointer;
+  }
+
+  &:active {
+    color: @basic_green;
+    opacity: 0.3;
+  }
 }
 
 .social-vkontakte {
@@ -137,6 +159,11 @@
 
   @media (min-width: @tablet-width) {
     margin-right: 25px;
+
+    &:active {
+      color: @special_dark-grey;
+      opacity: 0.3;
+    }
   }
 
   @media (min-width: @desktop-width) {
@@ -144,12 +171,22 @@
   }
 }
 
+.page-footer__copyright:hover .copyright__logo {
+  color: @basic_green;
+}
+
 .copyright__logo {
   margin-top: -8px;
+  color: @special_grey-2;
 
   @media (min-width: @tablet-width) {
     margin-top: -12px;
     margin-right: 2px;
+
+    &:active {
+      color: @basic_green;
+      opacity: 0.3;
+    }
   }
 
   @media (min-width: @desktop-width) {

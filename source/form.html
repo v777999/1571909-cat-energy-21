@@ -59,7 +59,8 @@
               <ul class="filter__client-list">
                 <li class="filter__client-item">
                   <label class="filter__client-label" for="client-name">Имя:*</label>
-                  <input class="filter__client-input" id="client-name" type="text" placeholder="Барсик" required autofocus>
+                  <input class="filter__client-input" id="client-name" type="text" placeholder="Барсик" required
+                    autofocus>
                 </li>
                 <li class="filter__client-item">
                   <label class="filter__client-label" for="client-weight">Вес (кг):*</label>
@@ -97,13 +98,19 @@
             <ul class="filter__contacts-list">
               <li class="filter__contacts-item">
                 <label class="filter__contacts-label filter__contacts-label--active" for="email-field">E-mail:*</label>
-                <input class="filter__contacts-email" type="email" id="email-field" placeholder="kuklachev@gmail.com"
-                  required>
+                <input class="filter__contacts-input--email" type="email" id="email-field"
+                  placeholder="kuklachev@gmail.com" required>
+                <svg class="filter__contacts-icon-email" width="20" height="14" viewbox="0 0 20 14">
+                  <use xlink:href="img/sprite.svg#icon_email"></use>
+                </svg>
               </li>
               <li class="filter__contacts-item">
                 <label class="filter__contacts-label" for="phone-field">Телефон:* </label>
-                <input class="filter__contacts-tel" type="tel" id="phone-field" placeholder="8 (960) 900-60-90"
+                <input class="filter__contacts-input--phone" type="tel" id="phone-field" placeholder="8 (960) 900-60-90"
                   required>
+                <svg class="filter__contacts-icon-phone" width="20" height="20" viewbox="0 0 20 20">
+                  <use xlink:href="img/sprite.svg#icon_phone"></use>
+                </svg>
               </li>
             </ul>
           </fieldset>
@@ -187,7 +194,7 @@
     </div>
   </footer>
 
-  <script async src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=8b218d93-82f5-460e-b613-21e5495d6f21"></script>
+  <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=8b218d93-82f5-460e-b613-21e5495d6f21"></script>
   <script src="js/script.min.js"></script>
 </body>
 

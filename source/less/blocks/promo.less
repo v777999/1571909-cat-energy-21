@@ -3,10 +3,14 @@
   margin: 0;
   padding: 0;
   height: 302px;
-  background-image: linear-gradient(fade(@basic_green, 85%), fade(@basic_green, 85%)), url("/img/index-background-mobile-2.jpg");
+  background-image: linear-gradient(fade(@basic_green, 85%), fade(@basic_green, 85%)), url("../img/index-background-mobile.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   text-align: center;
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/index-background-mobile@2x.jpg");
+  }
 
   @media (max-width: @mobile-width-only) {
     margin-bottom: 200px;
@@ -58,12 +62,16 @@
 .promo__container {
   @media (min-width: @desktop-width) {
     position: absolute;
-    background-image: linear-gradient(fade(@basic_green, 85%), fade(@basic_green, 85%)), url("../img/index-background-desktop-1.jpg");
+    background-image: linear-gradient(fade(@basic_green, 85%), fade(@basic_green, 85%)), url("../img/index-background-desktop.jpg");
     top: -68px;
     right: 0;
     width: 720px;
     height: 694px;
     z-index: -1;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/index-background-desktop@2x.jpg");
+    }
   }
 }
 

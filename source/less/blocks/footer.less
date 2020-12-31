@@ -21,7 +21,7 @@
 .page-footer__logo-name {
   display: block;
   text-align: center;
-  padding-bottom: 29px;
+  padding-bottom: 27px;
   border-bottom: 1px solid @border_line;
 
   &:hover {
@@ -50,9 +50,9 @@
 
 .page-footer__social {
   display: flex;
-  margin-top: 20px;
+  margin-top: 21px;
   width: 130px;
-  padding-right: 4px;
+  margin-bottom: -4px;
   margin-left: auto;
   margin-right: auto;
   justify-content: space-between;
@@ -74,6 +74,8 @@
 .social-vkontakte,
 .social-instagram,
 .social-facebook {
+  color: @special_grey-2;
+
   &:hover {
     color: @basic_green;
     cursor: pointer;
@@ -86,6 +88,8 @@
 }
 
 .social-vkontakte {
+  margin-left: -2px;
+
   @media (min-width: @tablet-width) {
     width: 30px;
     height: 22px;
@@ -99,7 +103,7 @@
 }
 
 .social-instagram {
-  margin-top: 1px;
+  margin-left: 6px;
 
   @media (min-width: @tablet-width) {
     width: 23px;
@@ -115,6 +119,9 @@
 }
 
 .social-facebook {
+  width: 22px;
+  height: 22px;
+
   @media (min-width: @tablet-width) {
     width: 30px;
     height: 35px;

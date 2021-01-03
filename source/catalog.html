@@ -4,10 +4,11 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>HTML Academy: Кэт энерджи</title>
-  <link rel="preload" href="css/style.min.css" as="style">
-  <link rel="preload" href="fonts/Oswald-Regular.woff2" as="font" type="font/woff2" crossorigin = "anonymous">
-  <link rel="preload" href="fonts/Oswald-Medium.woff2" as="font" type="font/woff2" crossorigin = "anonymous">
+  <title>HTML Academy: Кэт энерджи. Каталог</title>
+  <link rel="preload" href="fonts/Oswald-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="fonts/Oswald-Regular.woff" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/Oswald-Medium.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="fonts/Oswald-Medium.woff" as="font" crossorigin="anonymous">
   <link rel="stylesheet" href="css/style.min.css">
 </head>
 
@@ -27,7 +28,7 @@
           <picture>
             <source media="(min-width: 1440px)" srcset="img/logo/logo-desktop-full.svg">
             <source media="(min-width: 768px)" srcset="img/logo/logo-tablet-full.svg">
-            <img class="page-header__logo" src="img/logotype-name-mobile.svg" width="101" height="18"
+            <img class="page-header__logo" src="img/logo/logo-name-mobile.svg" width="101" height="18"
               alt="Логотип Кэт энерджи">
           </picture>
         </a>
@@ -344,7 +345,7 @@
           </li>
           <li class="show-all-wrapper">
             <section class="show-all">
-              <svg class="plus" width="30" height="30">
+              <svg class="show-all__icon" width="30" height="30">
                 <use href="img/sprite.svg#plus-tablet"></use>
               </svg>
               <h3 class="show-all__title">Показать еще 100500 товаров</h3>
@@ -418,7 +419,7 @@
             </div>
           </li>
         </ul>
-        <div class="bonus">
+        <div class="additional-goods__bonus">
           <svg class="gift" width="78" height="80">
             <use href="img/sprite.svg#icon_gift"></use>
           </svg>

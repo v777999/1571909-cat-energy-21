@@ -24,7 +24,7 @@
   <header class="page-header">
     <nav class="main-nav main-nav--closed main-nav--nojs">
       <div class="main-nav__wrapper">
-        <a class="mobile-logo"></a>
+        <a class="main-nav__logo"></a>
         <a href="#" class="logo-container">
           <picture>
             <source media="(min-width: 1440px)" srcset="img/logo/logo-desktop-full.svg">
@@ -49,7 +49,7 @@
     </nav>
   </header>
 
-  <main class="page-main">
+    <main class="page-main">
     <section class="promo">
       <div class="promo__wrapper">
         <div class="promo__text-wrapper">
@@ -157,8 +157,11 @@
         </picture>
         <div class="example__slider-toggles">
           <button class="example__slider-toggle--before example__slider-toggle--current" type="button">Было</button>
-          <div class="slider-controller">
-            <!-- <img src="img/slider_mobile.svg" width="84" height="14" alt=""> -->
+          <!-- <div class="slider-controller">
+            <img src="img/slider_mobile.svg" width="84" height="14" alt="">
+          </div> -->
+          <div class="slidecontainer">
+            <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
           </div>
           <button class="example__slider-toggle--after" type="button">Стало</button>
         </div>

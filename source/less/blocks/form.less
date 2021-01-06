@@ -462,12 +462,14 @@
 .filter__target-list {
   position: relative;
   margin: 0;
-  padding: 0;
-  padding-top: 28px;
-  padding-bottom: 20px;
+  padding: 28px 20px 20px;
   list-style: none;
+  border-bottom: 1px solid @border_line;
 
   @media (min-width: @tablet-width) {
+    margin-left: 71px;
+    margin-right: 69px;
+    margin-bottom: 71px;
     padding-left: 28px;
     padding-bottom: 22px;
     border: 1px solid @border_line;
@@ -479,6 +481,8 @@
     padding-top: 30px;
     padding-right: 28px;
     padding-bottom: 22px;
+    margin-left: 0;
+    margin-right: 0;
   }
 }
 
@@ -520,10 +524,9 @@
   left: 0;
   top: -6px;
   width: 30px;
-  height: 31px;
-  background-image: url("../img/radiobutton.svg");
-  background-repeat: no-repeat;
-  background-size: cover;
+  height: 30px;
+  border: 1px solid @special_grey;
+  border-radius: 50%;
 
   @media (min-width: @tablet-width) {
     width: 40px;
@@ -536,26 +539,26 @@
   }
 }
 
-.filter__target-label--active::before {
+.filter__target-input:checked + .filter__target-label::after {
   content: "";
   position: absolute;
-  left: 0;
-  top: -6px;
-  width: 31px;
-  height: 30px;
-  background-image: url("../img/radiobutton-active.svg");
-  background-repeat: no-repeat;
-  background-size: cover;
+  top: 3px;
+  left: 9px;
+  width: 13.5px;
+  height: 13.5px;
+  background-color: @basic_green;
+  border-radius: 50%;
 
   @media (min-width: @tablet-width) {
-    width: 41px;
-    height: 40px;
-    margin-top: 2px;
-    margin-left: -2px;
+    width: 18px;
+    height: 18px;
+    margin-top: 4px;
+    margin-left: 3px;
   }
 
   @media (min-width: @desktop-width) {
-    top: -8px;
+    top: 3px;
+    left: 8px;
   }
 }
 
@@ -616,9 +619,10 @@
   @media (min-width: @tablet-width) {
     font-size: 36px;
     line-height: 36px;
-    padding-top: 71px;
+    padding-top: 0;
     padding-bottom: 0;
     padding-right: 0;
+    margin-top: 0;
     margin-left: -118px;
     margin-bottom: 79px;
 

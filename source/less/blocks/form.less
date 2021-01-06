@@ -2,7 +2,6 @@
   display: flex;
   flex-direction: column;
   padding: 0;
-  //background-color: @basic_white;
   color: @basic_black;
   text-align: center;
 
@@ -270,9 +269,6 @@
   padding-bottom: 14px;
   padding-left: 14px;
   border: 1px solid @border_line;
-  /*   background-image: url("../img/icon_email.svg");
-  background-repeat: no-repeat;
-  background-position: 93% 15px; */
 
   &:invalid {
     color: @status_error;
@@ -348,9 +344,6 @@
   padding-left: 16px;
   margin-top: 2px;
   margin-left: -2px;
-  /*   background-image: url("../img/icon_phone-1.svg");
-  background-repeat: no-repeat;
-  background-position: 93% 12px; */
   color: @special_dark-grey;
   border: 1px solid @border_line;
 
@@ -599,18 +592,23 @@
   margin: 0;
   margin-top: -2px;
   margin-bottom: 0;
-  padding-left: 20px;
   border: none;
 }
 
-.filter__contacts-legend {
+.filter__contacts-legend,
+.filter__comment-legend,
+.filter__extra-legend {
+  position: relative;
   margin-left: -1px;
   font-size: 24px;
+
   line-height: 26px;
   font-weight: 400;
   text-transform: none;
   color: @basic_black;
+}
 
+.filter__contacts-legend {
   @media (max-width: @mobile-width-only) {
     margin-top: 23px;
     padding: 0 0 13px 20px;
@@ -623,7 +621,6 @@
     padding-bottom: 0;
     padding-right: 0;
     margin-top: 0;
-    margin-left: -118px;
     margin-bottom: 79px;
 
     & br {
@@ -637,20 +634,13 @@
 
   @media (min-width: @desktop-width) {
     margin-top: 24px;
-    margin-left: -707px;
   }
 }
 
 .filter__comment-legend {
-  margin-left: -1px;
-  font-size: 24px;
-  line-height: 26px;
-  font-weight: 400;
-  text-transform: none;
-  color: @basic_black;
-
   @media (max-width: @mobile-width-only) {
     margin-bottom: 37px;
+    padding: 0 0 13px 20px;
   }
 
   @media (min-width: @tablet-width) {
@@ -658,25 +648,16 @@
     line-height: 36px;
     margin-top: 0;
     margin-bottom: 76px;
-    margin-left: -468px;
     padding-bottom: 0;
     padding-right: 0;
   }
 
   @media (min-width: @desktop-width) {
     margin-top: -8px;
-    margin-left: -1060px;
   }
 }
 
 .filter__extra-legend {
-  margin-left: -1px;
-  font-size: 24px;
-  line-height: 26px;
-  font-weight: 400;
-  text-transform: none;
-  color: @basic_black;
-
   @media (max-width: @mobile-width-only) {
     padding-top: 20px;
     padding-bottom: 20px;
@@ -698,15 +679,12 @@
     line-height: 36px;
     padding-top: 65px;
     padding-bottom: 59px;
-    padding-left: 52px;
     margin-top: 32px;
-    margin-left: -468px;
     margin-bottom: 5px;
   }
 
   @media (min-width: @desktop-width) {
     padding-top: 63px;
-    margin-left: -1060px;
   }
 }
 
@@ -721,7 +699,28 @@
   padding-top: 2px;
 }
 
-.filter__contacts-legend::after {
+.filter__contacts-legend::before,
+.filter__comment-legend::before,
+.filter__extra-legend::before {
+  @media (min-width: @tablet-width) {
+    content: "";
+    flex-grow: 0;
+    flex-shrink: 1;
+    width: 30px;;
+    margin-top: 22px;
+    margin-right: 39px;
+    height: 2px;
+    background: @basic_green;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 70px;;
+  }
+}
+
+.filter__contacts-legend::after,
+.filter__comment-legend::after,
+.filter__extra-legend::after {
   content: "";
   flex-grow: 1;
   flex-shrink: 0;
@@ -736,70 +735,14 @@
   }
 }
 
-.filter__contacts-legend::before {
-  @media (min-width: @tablet-width) {
-    content: "";
-    flex-grow: 1;
-    flex-shrink: 0;
-    margin-top: 22px;
-    margin-right: 39px;
-    height: 2px;
-    background: @basic_green;
-  }
-}
-
-.filter__comment-legend::before {
-  @media (min-width: @tablet-width) {
-    content: "";
-    flex-grow: 1;
-    flex-shrink: 0;
-    margin-top: 22px;
-    margin-right: 39px;
-    height: 2px;
-    background: @basic_green;
-  }
-}
-
 .filter__comment-legend::after {
-  content: "";
-  flex-grow: 1;
-  flex-shrink: 0;
-  margin-top: 14px;
-  margin-left: 22px;
-  height: 2px;
-  background: @basic_green;
-
   @media (min-width: @tablet-width) {
     margin-top: 22px;
     margin-left: 40px;
   }
 }
 
-.filter__extra-legend::before {
-  @media (min-width: @tablet-width) {
-    content: "";
-    flex-grow: 1;
-    flex-shrink: 0;
-    margin-top: 24px;
-    margin-right: 39px;
-    height: 2px;
-    background: @basic_green;
-  }
-
-  @media (min-width: @desktop-width) {
-    margin-top: 22px;
-  }
-}
-
 .filter__extra-legend::after {
-  content: "";
-  flex-grow: 1;
-  flex-shrink: 0;
-  margin-top: 14px;
-  margin-left: 22px;
-  height: 2px;
-  background: @basic_green;
-
   @media (min-width: @tablet-width) {
     margin-top: 21px;
     margin-left: 40px;

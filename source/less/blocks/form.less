@@ -886,9 +886,10 @@
   top: -6px;
   width: 30px;
   height: 30px;
-  background-image: url("../img/checkbox.svg");
+  border: 1px solid @border_line;
+  /*   background-image: url("../img/checkbox.svg");
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: cover; */
 
   @media (min-width: @tablet-width) {
     width: 40px;
@@ -900,20 +901,26 @@
   }
 }
 
-.filter__extra-label--active::before {
+.filter__extra-input:checked + .filter__extra-label::after {
   content: "";
   position: absolute;
-  left: 0;
-  top: -6px;
+  left: 1px;
+  top: -4px;
   width: 30px;
   height: 30px;
-  background-image: url("../img/checkbox-checked.svg");
+
+  background-image: url("data:image/svg+xml,%3Csvg width='30' height='30' viewBox='0 0 26 26' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 17.718L5.3 11.2695L4.25 12.4574L11 20.0938L22.25 7.36648L21.2 6.09375L11 17.718Z' fill='%2368B738'/%3E%3C/svg%3E");
+  background-position: 0 0;
   background-repeat: no-repeat;
-  background-size: cover;
+  /*   background-image: url("../img/checkbox-checked.svg");
+  background-repeat: no-repeat;
+  background-size: cover; */
 
   @media (min-width: @tablet-width) {
-    width: 40px;
-    height: 40px;
+    width: 35px;
+    height: 38px;
+    top: 0;
+    left: 6px;
   }
 }
 

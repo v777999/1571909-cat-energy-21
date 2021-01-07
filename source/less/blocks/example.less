@@ -287,9 +287,15 @@
     font-size: 20px;
     line-height: 30px;
     padding-top: 3px;
+    padding-left: 0;
+    padding-right: 0;
     margin-left: 0;
     margin-bottom: 20px;
     border-bottom: 1px dotted @border_line;
+
+    &:hover {
+      border-bottom: 1px solid @basic_black;
+    }
   }
 
   @media (min-width: @desktop-width) {
@@ -312,9 +318,16 @@
     font-size: 20px;
     line-height: 30px;
     padding-top: 2px;
+    padding-left: 0;
+    padding-right: 0;
     margin-right: 0;
     margin-bottom: 20px;
     border-bottom: 1px dotted @border_line;
+
+
+    &:hover {
+      border-bottom: 1px solid @basic_black;
+    }
   }
 
   @media (min-width: @desktop-width) {
@@ -325,22 +338,19 @@
   }
 }
 
-.slider-controller {
+.example__slider-container {
+  position: relative;
+
   @media (max-width: @mobile-width-only) {
-    margin-top: 5px;
-    background-image: url("../img/slider_mobile.svg");
-    background-repeat: no-repeat;
-    background-size: cover;
     width: 84px;
     height: 14px;
+    background-color: @basic_white;
+    border: 1px solid @special_grey;
+    box-sizing: border-box;
+    border-radius: 6px;
+    margin-top: 4px;
   }
 
-  @media (min-width: @desktop-width) {
-    background-image: none;
-  }
-}
-
-.slidecontainer {
   @media (min-width: @tablet-width) {
     width: 100%;
     padding-top: 5px;
@@ -349,20 +359,34 @@
   }
 }
 
-.slider {
+.example__slider-controler {
+  @media (max-width: @mobile-width-only) {
+    appearance: none;
+    display: block;
+    width: 35px;
+    height: 6px;
+    margin: 3px;
+    background: @basic_green;
+    border-radius: 6px;
+    cursor: pointer;
+  }
+
   @media (min-width: @tablet-width) {
     appearance: none;
     width: 100%;
     height: 6px;
     border-radius: 5px;
     background: @special_grey-3;
-    outline: none;
     opacity: 0.7;
     transition: opacity 0.2s;
   }
 }
 
-.slider::-webkit-slider-thumb {
+.example__slider-controler::-webkit-slider-thumb {
+  @media (max-width: @mobile-width-only) {
+    appearance: none;
+  }
+
   @media (min-width: @tablet-width) {
     appearance: none;
     width: 34px;
@@ -371,6 +395,6 @@
     background: @basic_green;
     cursor: pointer;
     border: 13px solid @basic_white;
-    filter: drop-shadow(0 1px 3px rgba(0, 0, 0, 0.16));
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.16);
   }
 }

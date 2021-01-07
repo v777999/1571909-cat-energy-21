@@ -155,16 +155,17 @@
           <img class="example__image" src="img/before-mobile-1.png" srcset="img/before-mobile-1@2x.png 2x"
             alt="Кот до похудения">
         </picture>
+
         <div class="example__slider-toggles">
           <button class="example__slider-toggle--before example__slider-toggle--current" type="button">Было</button>
-          <!-- <div class="slider-controller">
-            <img src="img/slider_mobile.svg" width="84" height="14" alt="">
-          </div> -->
-          <div class="slidecontainer">
-            <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
+
+          <div class="example__slider-container">
+            <input type="range" min="1" max="100" value="50" class="example__slider-controler" id="myRange">
           </div>
+
           <button class="example__slider-toggle--after" type="button">Стало</button>
         </div>
+
       </div>
     </section>
   </main>
@@ -209,7 +210,7 @@
         </a>
 
       </div>
-      <a class="page-footer__copyright" href="https://htmlacademy.ru/intensive/adaptive" target="_blank">
+      <a class="page-footer__copyright" href="https://htmlacademy.ru/intensive/adaptive" aria-label="Переход на сайт HTML Academy" target="_blank">
         <span class="copyright__text">HTML Academy</span>
         <svg class="copyright__logo" width="27" height="34" viewbox="0 0 27 34">
           <use href="img/sprite.svg#logo-academy"></use>

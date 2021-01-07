@@ -48,21 +48,20 @@
     </nav>
   </header>
 
-  <main class="form__page-main">
-    <section class="form-request">
-      <div class="form-request__wrapper">
-        <h1 class="form__page-title">Подбор программы</h1>
-        <h2 class="form__title">Заполните анкету, и мы подберем<br> программу питания для вашего кота</h2>
-        <form class="form__filter" method="GET" action="https://echo.htmlacademy.ru">
-          <div class="filter__wrapper">
+  <main class="form-main">
+    <section class="form-main__request">
+      <div class="form-main__wrapper">
+        <h1 class="form-main__title">Подбор программы</h1>
+        <h2 class="form-main__description">Заполните анкету, и мы подберем<br> программу питания для вашего кота</h2>
+        <form class="form-main__filter" method="GET" action="https://echo.htmlacademy.ru">
+          <div class="filter">
 
             <fieldset class="filter__client">
               <legend class="visually-hidden">Информация о коте</legend>
               <ul class="filter__client-list">
                 <li class="filter__client-item">
                   <label class="filter__client-label" for="client-name">Имя:*</label>
-                  <input class="filter__client-input" id="client-name" type="text" placeholder="Барсик" required
-                    autofocus>
+                  <input class="filter__client-input" id="client-name" type="text" placeholder="Барсик" required>
                 </li>
                 <li class="filter__client-item">
                   <label class="filter__client-label" for="client-weight">Вес (кг):*</label>
@@ -75,22 +74,24 @@
               </ul>
             </fieldset>
 
-            <ul class="filter__target-list">
-              <li class="filter__target-item filter__radio">
-                <input class="filter__target-input visually-hidden" type="radio" name="target-group" id="slim-target"
-                  checked>
-                <label class="filter__target-label filter__target-label--active" for="slim-target">Похудение</label>
-              </li>
-              <li class="filter__target-item filter__radio">
-                <input class="filter__target-input visually-hidden" type="radio" name="target-group" id="weight-target">
-                <label class="filter__target-label" for="weight-target">Набор массы</label>
-              </li>
-              <li class="filter__target-item filter__radio">
-                <input class="filter__target-input visually-hidden" type="radio" name="target-group"
-                  id="unknown-target">
-                <label class="filter__target-label" for="unknown-target">Не знаю (Нужен ваш совет)</label>
-              </li>
-            </ul>
+            <fieldset class="filter__target">
+              <ul class="filter__target-list">
+                <li class="filter__target-item filter__radio">
+                  <input class="filter__target-input visually-hidden" type="radio" name="target-group" id="slim-target"
+                    checked>
+                  <label class="filter__target-label filter__target-label--active" for="slim-target">Похудение</label>
+                </li>
+                <li class="filter__target-item filter__radio">
+                  <input class="filter__target-input visually-hidden" type="radio" name="target-group"
+                    id="weight-target">
+                  <label class="filter__target-label" for="weight-target">Набор массы</label>
+                </li>
+                <li class="filter__target-item filter__radio">
+                  <input class="filter__target-input visually-hidden" type="radio" name="target-group"
+                    id="unknown-target">
+                  <label class="filter__target-label" for="unknown-target">Не знаю (Нужен ваш совет)</label>
+                </li>
+              </ul>
             </fieldset>
           </div>
 
@@ -158,7 +159,7 @@
 
   <footer class="page-footer">
     <section class="invitation">
-      <div class="invitation__wrapper">
+      <div class="invitation__wrapper invitation__wrapper--grey">
         <h2 class="invitation__title">Приглашаем<br><span class="invitation__title-second">к сотрудничеству</span>
           <span class="invitation__title-diler">дилеров!</span>
         </h2>

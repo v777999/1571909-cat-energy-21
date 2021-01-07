@@ -155,11 +155,19 @@
   height: 362px;
   background-size: cover;
 
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/location-mobile@2x.jpg");
+  }
+
   @media (min-width: @tablet-width) {
     background-image: url("../img/location-tablet.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     height: 400px;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/location-tablet@2x.jpg");
+    }
   }
 
   @media (min-width: @desktop-width) {
@@ -168,5 +176,9 @@
     background-repeat: no-repeat;
     height: 400px;
     margin-top: 2px;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/location-desktop@2x.jpg");
+    }
   }
 }

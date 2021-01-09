@@ -21,7 +21,6 @@
 .page-footer__logo-name {
   display: block;
   text-align: center;
-  padding-bottom: 27px;
   border-bottom: 1px solid @border_line;
 
   &:hover {
@@ -67,75 +66,6 @@
   }
 }
 
-.social__link {
-  text-decoration: none;
-}
-
-.social-vkontakte,
-.social-instagram,
-.social-facebook {
-  color: @special_grey-2;
-
-  &:hover {
-    color: @basic_green;
-    cursor: pointer;
-  }
-
-  &:active {
-    color: @basic_green;
-    opacity: 0.3;
-  }
-}
-
-.social-vkontakte {
-  margin-left: -2px;
-
-  @media (min-width: @tablet-width) {
-    width: 30px;
-    height: 22px;
-    margin-left: -4px;
-  }
-
-  @media (min-width: @desktop-width) {
-    margin-top: 0;
-    margin-left: -7px;
-  }
-}
-
-.social-instagram {
-  margin-left: 6px;
-
-  @media (min-width: @tablet-width) {
-    width: 23px;
-    height: 23px;
-    margin-top: 1px;
-    margin-left: 10px;
-  }
-
-  @media (min-width: @desktop-width) {
-    margin-top: 2px;
-    margin-left: 6px;
-  }
-}
-
-.social-facebook {
-  width: 22px;
-  height: 22px;
-
-  @media (min-width: @tablet-width) {
-    width: 30px;
-    height: 35px;
-    margin-right: 4px;
-  }
-
-  @media (min-width: @desktop-width) {
-    margin-top: 2px;
-    margin-right: 8px;
-    width: 28px;
-    height: 33px;
-  }
-}
-
 .page-footer__copyright {
   display: flex;
   margin-top: 20px;
@@ -153,14 +83,15 @@
   }
 
   @media (min-width: @desktop-width) {
-    padding-right: 0;
+    padding-right: 2px;
+    padding-left: 2px;
   }
 }
 
-.copyright__text {
+.page-footer__copyright-text {
   font-size: 16px;
   line-height: 18px;
-  font-family: "Arial", "Tahoma", sans-serif;
+  font-family: @font_secondary;
   margin-left: -1px;
   color: @special_dark-grey;
 
@@ -178,11 +109,11 @@
   }
 }
 
-.page-footer__copyright:hover .copyright__logo {
+.page-footer__copyright:hover .page-footer__copyright-logo {
   color: @basic_green;
 }
 
-.copyright__logo {
+.page-footer__copyright-logo {
   margin-top: -8px;
   color: @special_grey-2;
 

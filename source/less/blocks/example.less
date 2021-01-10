@@ -398,3 +398,17 @@
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.16);
   }
 }
+
+.example__slider-controler::before {
+  @media (min-width: @tablet-width) {
+    content: "";
+    position: absolute;
+    /*     top: -13px;
+    left: -14px; */
+    top: 0;
+    width: 33px;
+    height: 33px;
+    border: 1px solid @basic_green;
+    border-radius: 50%;
+  }
+}

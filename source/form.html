@@ -53,7 +53,7 @@
       <div class="form-main__wrapper">
         <h1 class="form-main__title">Подбор программы</h1>
         <h2 class="form-main__description">Заполните анкету, и мы подберем<br> программу питания для вашего кота</h2>
-        <form class="form-main__filter" method="GET" action="https://echo.htmlacademy.ru">
+        <form class="form-main__filter" method="POST" action="https://echo.htmlacademy.ru">
           <div class="filter">
 
             <fieldset class="filter__client">
@@ -61,15 +61,15 @@
               <ul class="filter__client-list">
                 <li class="filter__client-item">
                   <label class="filter__client-label" for="client-name">Имя:*</label>
-                  <input class="filter__client-input" id="client-name" type="text" placeholder="Барсик" required>
+                  <input class="filter__client-input" id="client-name" name="client-name" type="text" placeholder="Барсик" required>
                 </li>
                 <li class="filter__client-item">
                   <label class="filter__client-label" for="client-weight">Вес (кг):*</label>
-                  <input class="filter__client-input" id="client-weight" type="text" placeholder="7" required>
+                  <input class="filter__client-input" id="client-weight" name="client-weight" type="text" placeholder="7" required>
                 </li>
                 <li class="filter__client-item">
                   <label class="filter__client-label" for="client-age">Возраст (лет):</label>
-                  <input class="filter__client-input" id="client-age" type="text" placeholder="7">
+                  <input class="filter__client-input" id="client-age" name="client-age" type="text" placeholder="7">
                 </li>
               </ul>
             </fieldset>
@@ -77,19 +77,19 @@
             <fieldset class="filter__target">
               <ul class="filter__target-list">
                 <li class="filter__target-item filter__radio">
-                  <input class="filter__target-input visually-hidden" type="radio" name="target-group" id="slim-target"
+                  <input class="filter__target-input visually-hidden" type="radio" name="slim-target" id="slim-target"
                     checked>
                   <label class="filter__target-label filter__target-label--active" for="slim-target">Похудение</label>
                 </li>
                 <li class="filter__target-item filter__radio">
-                  <input class="filter__target-input visually-hidden" type="radio" name="target-group"
+                  <input class="filter__target-input visually-hidden" type="radio" name="weight-target"
                     id="weight-target">
                   <label class="filter__target-label" for="weight-target">Набор массы</label>
                 </li>
                 <li class="filter__target-item filter__radio">
-                  <input class="filter__target-input visually-hidden" type="radio" name="target-group"
-                    id="unknown-target">
-                  <label class="filter__target-label" for="unknown-target">Не знаю (Нужен ваш совет)</label>
+                  <input class="filter__target-input visually-hidden" type="radio" name="need-advice"
+                    id="need-advice">
+                  <label class="filter__target-label" for="need-advice">Не знаю (Нужен ваш совет)</label>
                 </li>
               </ul>
             </fieldset>
@@ -100,7 +100,7 @@
             <ul class="filter__contacts-list">
               <li class="filter__contacts-item">
                 <label class="filter__contacts-label filter__contacts-label--active" for="email-field">E-mail:*</label>
-                <input class="filter__contacts-input--email" type="email" id="email-field"
+                <input class="filter__contacts-input-email" type="email" id="email-field" name="e-mail"
                   placeholder="kuklachev@gmail.com" required>
                 <svg class="filter__contacts-icon-email" width="20" height="14" viewbox="0 0 20 14">
                   <use xlink:href="img/sprite.svg#icon_email"></use>
@@ -108,7 +108,7 @@
               </li>
               <li class="filter__contacts-item">
                 <label class="filter__contacts-label" for="phone-field">Телефон:* </label>
-                <input class="filter__contacts-input--phone" type="tel" id="phone-field" placeholder="8 (960) 900-60-90"
+                <input class="filter__contacts-input-phone" type="tel" id="phone-field" name="phone" placeholder="8 (960) 900-60-90"
                   required>
                 <svg class="filter__contacts-icon-phone" width="20" height="20" viewbox="0 0 20 20">
                   <use xlink:href="img/sprite.svg#icon_phone"></use>
@@ -129,20 +129,20 @@
             <h2 class="filter__extra-legend">Дополнительно</h2>
             <ul class="filter__extra-list">
               <li class="filter__extra-item filter__extra-checkbox">
-                <input class="filter__extra-input visually-hidden" id="sweetener-field" type="checkbox" checked>
+                <input class="filter__extra-input visually-hidden" id="sweetener-field" name="sweetener" type="checkbox" checked>
                 <label class="filter__extra-label filter__extra-label--active"
                   for="sweetener-field">Cахарозаменитель</label>
               </li>
               <li class="filter__extra-item filter__extra-checkbox">
-                <input class="filter__extra-input visually-hidden" id="water-field" type="checkbox">
+                <input class="filter__extra-input visually-hidden" id="water-field" name="water" type="checkbox">
                 <label class="filter__extra-label" for="water-field">Питьевая вода</label>
               </li>
               <li class="filter__extra-item filter__extra-checkbox">
-                <input class="filter__extra-input visually-hidden" id="milk-field" type="checkbox">
+                <input class="filter__extra-input visually-hidden" id="milk-field" name="milk" type="checkbox">
                 <label class="filter__extra-label" for="milk-field">Молоко</label>
               </li>
               <li class="filter__extra-item filter__extra-checkbox">
-                <input class="filter__extra-input visually-hidden" id="vitamins-field" type="checkbox">
+                <input class="filter__extra-input visually-hidden" id="vitamins-field" name="vitamins" type="checkbox">
                 <label class="filter__extra-label" for="vitamins-field">Витамины</label>
               </li>
             </ul>
@@ -159,7 +159,7 @@
 
   <footer class="page-footer">
     <section class="invitation">
-      <div class="invitation__wrapper">
+      <div class="invitation__wrapper--grey">
         <h2 class="invitation__title">Приглашаем<br><span class="invitation__title-second">к сотрудничеству</span>
           <span class="invitation__title-diler">дилеров!</span>
         </h2>

@@ -27,8 +27,15 @@
   }
 }
 
+.invitation__wrapper--index {
+  background-color: @basic_white;
+}
+
 .invitation__wrapper--grey {
+  display: flex;
+  justify-content: space-between;
   background-color: @basic_grey;
+  z-index: 1;
 
   @media (max-width: @mobile-width-only) {
     padding: 27px 19px 26px 20px;

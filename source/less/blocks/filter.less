@@ -53,8 +53,6 @@
   border: none;
 
   @media (min-width: @tablet-width) {
-    padding-left: 71px;
-    padding-right: 68px;
     margin-bottom: 44px;
   }
 
@@ -167,7 +165,7 @@
   }
 }
 
-.filter__contacts-input--email {
+.filter__contacts-input-email {
   margin-top: 3px;
   margin-left: 0;
   width: 100%;
@@ -180,8 +178,16 @@
   padding-left: 14px;
   border: 1px solid @border_line;
 
-  &:invalid {
-    color: @status_error;
+  &:hover {
+    border: 2px solid @special_grey;
+  }
+
+  &:focus {
+    border: 2px solid @basic_black;
+    outline: none;
+  }
+
+  &:focus:invalid {
     border: 2px solid @status_error;
   }
 
@@ -204,6 +210,17 @@
     padding-left: 18px;
     background-position: right 18px top 18px;
   }
+}
+
+.filter__contacts-input-email:focus:invalid + .filter__contacts-icon-email,
+.filter__contacts-input-phone:focus:invalid + .filter__contacts-icon-phone {
+  color: @status_error;
+  stroke: @status_error;
+}
+
+.filter__contacts-input-email:disabled + .filter__contacts-icon-email {
+  color: @basic_green;
+  stroke: @basic_green;
 }
 
 .filter__contacts-icon-email {
@@ -242,7 +259,7 @@
   }
 }
 
-.filter__contacts-input--phone {
+.filter__contacts-input-phone {
   width: 100%;
   font-size: 16px;
   line-height: 18px;
@@ -255,6 +272,19 @@
   margin-left: -2px;
   color: @special_dark-grey;
   border: 1px solid @border_line;
+
+  &:hover {
+    border: 2px solid @special_grey;
+  }
+
+  &:focus {
+    border: 2px solid @basic_black;
+    outline: none;
+  }
+
+  &:focus:invalid {
+    border: 2px solid @status_error;
+  }
 
   @media (min-width: @tablet-width) {
     font-size: 20px;
@@ -673,7 +703,7 @@
   }
 
   @media (min-width: @desktop-width) {
-    padding-left: 90px;
+    padding-left: 110px;
     padding-right: 110px;
   }
 }

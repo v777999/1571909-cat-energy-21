@@ -4,7 +4,7 @@
   margin-bottom: 25px;
 
   @media (min-width: @tablet-width) {
-    margin-bottom: 68px;
+    margin-bottom: 70px;
   }
 }
 
@@ -32,8 +32,8 @@
 
   @media (min-width: @desktop-width) {
     border: none;
-    margin-top: 124px;
-    margin-bottom: 126px;
+    margin-top: 122px;
+    margin-bottom: 128px;
     padding-left: 110px;
     padding-right: 110px;
   }
@@ -82,10 +82,18 @@
     padding-bottom: 10px;
   }
 
+  @media (min-width: @tablet-width) {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-bottom: -2px;
+  }
+
   @media (min-width: @desktop-width) {
     width: 168px;
     margin-left: auto;
     margin-right: auto;
+    padding-top: 12px;
+    padding-bottom: 9px;
   }
 }
 
@@ -143,12 +151,23 @@
     border: none;
     padding-top: 20px;
     padding-bottom: 40px;
-    margin-bottom: 140px;
+    margin-bottom: 142px;
     background-color: @basic_grey;
   }
 
   @media (min-width: @desktop-width) {
+    padding-bottom: 42px;
     margin-bottom: 145px;
+  }
+}
+
+.catalog__list-item-image {
+  @media (min-width: @tablet-width) {
+    margin-top: -88px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 2px;
   }
 }
 
@@ -159,6 +178,7 @@
   }
 }
 
+
 .catalog__list-item:nth-child(5),
 .catalog__list-item:nth-child(6),
 .catalog__list-item:nth-child(7) {
@@ -167,7 +187,7 @@
   }
 }
 
-.catalog__list-item-image {
+.catalog__list-item-link {
   @media (min-width: @tablet-width) {
     margin-top: -4px;
     margin-bottom: 29px;
@@ -176,135 +196,5 @@
   @media (min-width: @desktop-width) {
     margin-top: -14px;
     margin-bottom: 36px;
-  }
-}
-
-.data__caption {
-  font-size: 16px;
-  line-height: 20px;
-  font-weight: 400;
-  text-decoration: none;
-  text-transform: uppercase;
-  font-family: @font_primary;
-  text-align: left;
-  padding-right: 65px;
-  padding-left: 0;
-  padding-bottom: 12px;
-  color: @special_dark-grey-2;
-
-  @media (min-width: @tablet-width) {
-    font-size: 20px;
-    line-height: 24px;
-    padding-left: 60px;
-    padding-right: 60px;
-    text-align: center;
-  }
-
-  @media (min-width: @desktop-width) {
-    padding-left: 15px;
-    padding-right: 16px;
-  }
-}
-
-.additional-goods__data-caption {
-  font-size: 16px;
-  line-height: 20px;
-  font-weight: 400;
-  text-decoration: none;
-  text-transform: uppercase;
-  font-family: @font_primary;
-  margin-top: 2px;
-  margin-bottom: 0;
-  padding-bottom: 13px;
-  padding-left: 2px;
-  color: @special_dark-grey-2;
-
-  @media (min-width: @tablet-width) {
-    font-size: 20px;
-    line-height: 20px;
-    margin-left: -2px;
-  }
-
-  @media (min-width: @desktop-width) {
-    padding-bottom: 0;
-  }
-}
-
-.catalog__list-item-data {
-  font-size: 12px;
-  line-height: 16px;
-  font-family: @font_secondary;
-  border-collapse: collapse;
-  margin-top: 1px;
-  margin-left: auto;
-  margin-right: auto;
-
-  @media (min-width: @tablet-width) {
-    margin-bottom: 33px;
-  }
-
-  @media (min-width: @desktop-width) {
-    text-align: left;
-    margin: 0;
-    padding: 0;
-    margin-bottom: 32px;
-  }
-}
-
-.catalog__list-item-data tr:nth-child(2),
-.catalog__list-item-data tr:nth-child(3),
-.catalog__list-item-data tr:nth-child(4) {
-  @media (min-width: @tablet-width) {
-    border-bottom: 1px solid @border_line;
-  }
-}
-
-.catalog__list-item-data tr {
-  @media (min-width: @tablet-width) {
-    display: flex;
-    justify-content: space-between;
-  }
-}
-
-.data__name {
-  padding: 0;
-  text-align: left;
-  margin-top: -2px;
-  width: 76px;
-
-  @media (min-width: @tablet-width) {
-    text-align: left;
-    font-size: 16px;
-    line-height: 16px;
-    padding-top: 8px;
-    padding-bottom: 7px;
-    padding-left: 2px;
-  }
-
-  @media (min-width: @desktop-width) {
-    padding-top: 12px;
-    padding-bottom: 6px;
-    padding-left: 4px;
-  }
-}
-
-.data__value {
-  padding: 0;
-  padding-right: 2px;
-  text-align: right;
-  white-space: nowrap;
-
-  @media (min-width: @tablet-width) {
-    font-size: 16px;
-    line-height: 16px;
-    padding-top: 4px;
-    padding-right: 4px;
-  }
-
-  @media (min-width: @desktop-width) {
-    text-align: right;
-    padding-top: 10px;
-    margin-right: 6px;
-    padding-bottom: 6px;
   }
 }

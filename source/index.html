@@ -5,8 +5,10 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>HTML Academy: Кэт энерджи</title>
-  <link rel="preload" href="../fonts/Oswald-Regular.woff2" as="font" type="font/woff2" crossorigin = "anonymous">
-  <link rel="preload" href="../fonts/Oswald-Medium.woff2" as="font" type="font/woff2" crossorigin = "anonymous">
+  <link rel="preload" href="fonts/Oswald-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="fonts/Oswald-Regular.woff" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/Oswald-Medium.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="fonts/Oswald-Medium.woff" as="font" crossorigin="anonymous">
   <link rel="stylesheet" href="css/style.min.css">
 </head>
 
@@ -18,10 +20,11 @@
         stroke="currentColor" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round" />
     </symbol>
   </svg>
+
   <header class="page-header">
     <nav class="main-nav main-nav--closed main-nav--nojs">
       <div class="main-nav__wrapper">
-        <a class="mobile-logo"></a>
+        <a class="main-nav__logo"></a>
         <a href="#" class="logo-container">
           <picture>
             <source media="(min-width: 1440px)" srcset="img/logo/logo-desktop-full.svg">
@@ -46,7 +49,7 @@
     </nav>
   </header>
 
-  <main class="page-main">
+    <main class="page-main">
     <section class="promo">
       <div class="promo__wrapper">
         <div class="promo__text-wrapper">
@@ -74,8 +77,8 @@
       </div>
     </section>
 
-    <div class="programs__wrapper">
-      <section class="programs">
+    <section class="programs">
+      <div class="programs__wrapper">
         <h2 class="visually-hidden">Выбор программы питания</h2>
         <ul class="programs__list">
           <li class="programs__item programs__item--slim">
@@ -91,11 +94,11 @@
             <a class="programs__item-button" href="#">Каталог Pro</a>
           </li>
         </ul>
-      </section>
-    </div>
+      </div>
+    </section>
 
-    <div class="advantages__wrapper">
-      <section class="advantages">
+    <section class="advantages">
+      <div class="advantages__wrapper">
         <h2 class="advantages__title">Как это работает</h2>
         <ul class="advantages__list">
           <li class="advantages__item advantages__item--substances">
@@ -112,8 +115,9 @@
                 питомца!</span></p>
           </li>
         </ul>
-      </section>
-    </div>
+      </div>
+    </section>
+
 
     <section class="example">
       <div class="example__wrapper">
@@ -123,7 +127,7 @@
             Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит
             по
             16 часов в день.</p>
-          <div class="example-container">
+          <div class="example__container">
             <ul class="example__data">
               <li class="example__item">
                 <p class="example__value">5 кг</p>
@@ -151,19 +155,24 @@
           <img class="example__image" src="img/before-mobile-1.png" srcset="img/before-mobile-1@2x.png 2x"
             alt="Кот до похудения">
         </picture>
+
         <div class="example__slider-toggles">
           <button class="example__slider-toggle--before example__slider-toggle--current" type="button">Было</button>
-          <div class="slider-controller">
-            <!-- <img src="img/slider_mobile.svg" width="84" height="14" alt=""> -->
+
+          <div class="example__slider-container">
+            <input type="range" min="1" max="100" value="50" class="example__slider-controler" id="myRange">
           </div>
+
           <button class="example__slider-toggle--after" type="button">Стало</button>
         </div>
+
+      </div>
     </section>
   </main>
 
   <footer class="page-footer">
     <section class="invitation">
-      <div class="invitation__wrapper">
+      <div class="invitation__wrapper invitation__wrapper--index">
         <h2 class="invitation__title">Приглашаем<br><span class="invitation__title-second">к сотрудничеству</span>
           <span class="invitation__title-diler">дилеров!</span>
         </h2>
@@ -179,25 +188,31 @@
         </svg>
       </a>
       <div class="page-footer__social social">
-        <a class="social__link social__link--vkontakte visually-hidden" href="https://vk.com/htmlacademy">Мы в
-          Вконтакте</a>
-        <svg class="social-vkontakte" width="23" height="16" viewbox="0 0 23 16">
-          <use href="img/sprite.svg#icon_vkontakte"></use>
-        </svg>
-        <a class="social__link social__link--instagram visually-hidden" href="https://vk.com/htmlacademy">Мы в
-          Инстаграме</a>
-        <svg class="social-instagram" width="16" height="16" viewbox="0 0 16 16">
-          <use href="img/sprite.svg#icon_instagram"></use>
-        </svg>
-        <a class="social__link social__link--facebook visually-hidden" href="https://vk.com/htmlacademy">Мы в
-          Фейсбуке</a>
-        <svg class="social-facebook" width="22" height="22" viewbox="0 0 22 22">
-          <use href="img/sprite.svg#icon_facebook"></use>
-        </svg>
+        <a class="social__link social__link--vkontakte" href="https://vk.com/htmlacademy" target="_blank">
+          <svg class="social__vkontakte" width="23" height="16" viewbox="0 0 23 16">
+            <use xlink:href="img/sprite.svg#icon_vkontakte"></use>
+          </svg>
+          <span class="visually-hidden">Мы в Вконтакте</span>
+        </a>
+
+        <a class="social__link social__link--instagram" href="https://instagram.com/htmlacademy" target="_blank">
+          <svg class="social__instagram" width="23" height="16" viewbox="0 0 23 16">
+            <use xlink:href="img/sprite.svg#icon_instagram"></use>
+          </svg>
+          <span class="visually-hidden">Мы в Инстаграме</span>
+        </a>
+
+        <a class="social__link social__link--facebook" href="https://facebook.com/htmlacademy" target="_blank">
+          <svg class="social__facebook" width="22" height="22" viewbox="0 0 22 22">
+            <use xlink:href="#icon_facebook"></use>
+          </svg>
+          <span class="visually-hidden">Мы в Фейсбуке</span>
+        </a>
+
       </div>
-      <a class="page-footer__copyright" href="https://htmlacademy.ru/intensive/adaptive" target="_blank">
-        <span class="copyright__text">HTML Academy</span>
-        <svg class="copyright__logo" width="27" height="34" viewbox="0 0 27 34">
+      <a class="page-footer__copyright" href="https://htmlacademy.ru/intensive/adaptive" target="_blank" aria-label="Переход на сайт HTML Academy">
+        <span class="page-footer__copyright-text">HTML Academy</span>
+        <svg class="page-footer__copyright-logo" width="27" height="34" viewbox="0 0 27 34">
           <use href="img/sprite.svg#logo-academy"></use>
         </svg>
       </a>

@@ -1,0 +1,133 @@
+.product-data {
+  font-size: 12px;
+  line-height: 16px;
+  font-family: @font_secondary;
+  border-collapse: collapse;
+  margin-top: 1px;
+  margin-left: auto;
+  margin-right: auto;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 33px;
+  }
+
+  @media (min-width: @desktop-width) {
+    text-align: left;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 32px;
+  }
+}
+
+.product-data tr:nth-child(2),
+.product-data tr:nth-child(3),
+.product-data tr:nth-child(4) {
+  @media (min-width: @tablet-width) {
+    border-bottom: 1px solid @border_line;
+  }
+}
+
+.product-data tr:nth-child(2) {
+  @media (min-width: @desktop-width) {
+    padding-bottom: 2px;
+  }
+}
+
+.product-data tr:nth-child(3) {
+  @media (min-width: @tablet-width) {
+    margin-top: 3px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-top: -1px;
+  }
+}
+
+.product-data tr:nth-child(4) {
+  @media (min-width: @tablet-width) {
+    margin-top: 3px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-top: -2px;
+    padding-bottom: 1px;
+  }
+}
+
+.product-data tr {
+  @media (min-width: @tablet-width) {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.product-data__caption {
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 400;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-family: @font_primary;
+  text-align: left;
+  padding: 2px 65px 14px 0;
+  color: @special_dark-grey-2;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 24px;
+    padding-top: 0;
+    padding-right: 60px;
+    padding-left: 62px;
+    padding-bottom: 16px;
+    text-align: center;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-left: 14px;
+    padding-right: 16px;
+    padding-bottom: 10px;
+  }
+}
+
+.product-data__name {
+  padding: 0;
+  text-align: left;
+  margin-top: -2px;
+  width: 76px;
+
+  @media (min-width: @tablet-width) {
+    text-align: left;
+    font-size: 16px;
+    line-height: 16px;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    padding-left: 2px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 12px;
+    padding-bottom: 6px;
+    padding-left: 4px;
+  }
+}
+
+.product-data__value {
+  padding: 0;
+  padding-right: 0;
+  text-align: right;
+  white-space: nowrap;
+
+  @media (min-width: @tablet-width) {
+    font-size: 16px;
+    line-height: 16px;
+    padding-top: 5px;
+    padding-right: 2px;
+  }
+
+  @media (min-width: @desktop-width) {
+    text-align: right;
+    padding-top: 10px;
+    margin-right: 7px;
+    padding-bottom: 6px;
+  }
+}

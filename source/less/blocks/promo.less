@@ -3,10 +3,13 @@
   margin: 0;
   padding: 0;
   height: 302px;
-  background-image: linear-gradient(fade(@basic_green, 85%), fade(@basic_green, 85%)), url("/img/index-background-mobile-2.jpg");
-  background-repeat: no-repeat;
+  background: @basic_green url("../img/index-background-mobile.jpg") no-repeat;
   background-size: cover;
   text-align: center;
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/index-background-mobile@2x.jpg");
+  }
 
   @media (max-width: @mobile-width-only) {
     margin-bottom: 200px;
@@ -21,6 +24,7 @@
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 2px;
+    background-color: @basic_white;
     background-image: none;
     height: 609px;
     background-size: cover;
@@ -51,19 +55,21 @@
   @media (min-width: @desktop-width) {
     margin: 0;
     padding: 0;
-    //background-image: linear-gradient(fade(@basic_green, 85%), fade(@basic_green, 85%)), url("/img/index-background-mobile-2.jpg");
   }
 }
 
 .promo__container {
   @media (min-width: @desktop-width) {
     position: absolute;
-    background-image: linear-gradient(fade(@basic_green, 85%), fade(@basic_green, 85%)), url("../img/index-background-desktop-1.jpg");
+    background: @basic_green url("../img/index-background-desktop.jpg") no-repeat;
     top: -68px;
     right: 0;
     width: 720px;
     height: 694px;
-    z-index: -1;
+
+    @media (min-resolution: 2dppx) {
+      background: @basic_green url("../img/index-background-desktop@2x.jpg") no-repeat;
+    }
   }
 }
 
@@ -72,8 +78,8 @@
   margin: 0;
   padding: 0;
   margin-top: -1px;
-  margin-bottom: 25px;
-  font-family: "Oswald", sans-serif;
+  margin-bottom: 26px;
+  font-family: @font_primary;
   font-size: 36px;
   line-height: 36px;
   font-weight: 400;
@@ -128,7 +134,7 @@
 
 .promo__header-image {
   @media (min-width: @tablet-width) {
-    padding-right: 10px;
+    padding-right: 4px;
   }
 
   @media (min-width: @desktop-width) {
@@ -153,10 +159,8 @@
   padding: 11px 20px;
   font-size: 14px;
   line-height: 18px;
-  /* font-family: "Oswald", sans-serif; */
   text-decoration: none;
   text-transform: uppercase;
-  /* text-align: center; */
   margin-left: auto;
   margin-right: auto;
   background-color: @basic_green;
@@ -176,7 +180,7 @@
   @media (min-width: @tablet-width) {
     position: absolute;
     width: 244px;
-    padding: 14px 26px;
+    padding: 16px 26px;
     margin-left: 112px;
     margin-top: -57px;
     font-size: 20px;
@@ -184,12 +188,7 @@
   }
 
   @media (min-width: @desktop-width) {
-    /* position: absolute; */
     margin-top: 390px;
     margin-left: 190px;
-    /* padding: 16px 20px; */
-    /* width: 244px; */
-    /* font-size: 20px;
-    line-height: 20px; */
   }
 }

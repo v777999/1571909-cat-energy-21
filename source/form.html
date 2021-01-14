@@ -5,9 +5,10 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>HTML Academy: Кэт энерджи</title>
-  <link rel="preload" href="css/style.min.css" as="style">
-  <link rel="preload" href="fonts/Oswald-Regular.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="preload" href="fonts/Oswald-Medium.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/Oswald-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="fonts/Oswald-Regular.woff" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/Oswald-Medium.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="fonts/Oswald-Medium.woff" as="font" crossorigin="anonymous">
   <link rel="stylesheet" href="css/style.min.css">
 </head>
 
@@ -22,7 +23,7 @@
   <header class="page-header">
     <nav class="main-nav main-nav--closed main-nav--nojs">
       <div class="main-nav__wrapper">
-        <a class="mobile-logo"></a>
+        <a class="main-nav__logo"></a>
         <a href="index.html" class="logo-container">
           <picture>
             <source media="(min-width: 1440px)" srcset="img/logo/logo-desktop-full.svg">
@@ -47,66 +48,75 @@
     </nav>
   </header>
 
-  <main class="form__page-main">
-    <section class="form-request">
-      <div class="form-request__wrapper">
-        <h1 class="form__page-title">Подбор программы</h1>
-        <h2 class="form__title">Заполните анкету, и мы подберем<br> программу питания для вашего кота</h2>
-        <form class="form__filter" method="GET" action="https://echo.htmlacademy.ru">
-          <div class="filter__wrapper">
+  <main class="form-main">
+    <section class="form-main__request">
+      <div class="form-main__wrapper">
+        <h1 class="form-main__title">Подбор программы</h1>
+        <h2 class="form-main__description">Заполните анкету, и мы подберем<br> программу питания для вашего кота</h2>
+        <form class="form-main__filter" method="POST" action="https://echo.htmlacademy.ru">
+          <div class="filter">
+
             <fieldset class="filter__client">
               <legend class="visually-hidden">Информация о коте</legend>
               <ul class="filter__client-list">
                 <li class="filter__client-item">
                   <label class="filter__client-label" for="client-name">Имя:*</label>
-                  <input class="filter__client-input" id="client-name" type="text" placeholder="Барсик" required autofocus>
+                  <input class="filter__client-input" id="client-name" name="client-name" type="text" placeholder="Барсик" required>
                 </li>
                 <li class="filter__client-item">
                   <label class="filter__client-label" for="client-weight">Вес (кг):*</label>
-                  <input class="filter__client-input" id="client-weight" type="text" placeholder="7" required>
+                  <input class="filter__client-input" id="client-weight" name="client-weight" type="text" placeholder="7" required>
                 </li>
                 <li class="filter__client-item">
                   <label class="filter__client-label" for="client-age">Возраст (лет):</label>
-                  <input class="filter__client-input" id="client-age" type="text" placeholder="7">
+                  <input class="filter__client-input" id="client-age" name="client-age" type="text" placeholder="7">
                 </li>
               </ul>
             </fieldset>
+
             <fieldset class="filter__target">
-              <legend class="visually-hidden">Цели программы</legend>
               <ul class="filter__target-list">
                 <li class="filter__target-item filter__radio">
-                  <input class="filter__target-input visually-hidden" type="radio" name="target-group" id="slim-target"
+                  <input class="filter__target-input visually-hidden" type="radio" name="slim-target" id="slim-target"
                     checked>
                   <label class="filter__target-label filter__target-label--active" for="slim-target">Похудение</label>
                 </li>
                 <li class="filter__target-item filter__radio">
-                  <input class="filter__target-input visually-hidden" type="radio" name="target-group"
+                  <input class="filter__target-input visually-hidden" type="radio" name="weight-target"
                     id="weight-target">
                   <label class="filter__target-label" for="weight-target">Набор массы</label>
                 </li>
                 <li class="filter__target-item filter__radio">
-                  <input class="filter__target-input visually-hidden" type="radio" name="target-group"
-                    id="unknown-target">
-                  <label class="filter__target-label" for="unknown-target">Не знаю (Нужен ваш совет)</label>
+                  <input class="filter__target-input visually-hidden" type="radio" name="need-advice"
+                    id="need-advice">
+                  <label class="filter__target-label" for="need-advice">Не знаю (Нужен ваш совет)</label>
                 </li>
               </ul>
             </fieldset>
           </div>
+
           <fieldset class="filter__contacts">
             <h2 class="filter__contacts-legend">Контактные данные <br>(владельца кота)</h2>
             <ul class="filter__contacts-list">
               <li class="filter__contacts-item">
                 <label class="filter__contacts-label filter__contacts-label--active" for="email-field">E-mail:*</label>
-                <input class="filter__contacts-email" type="email" id="email-field" placeholder="kuklachev@gmail.com"
-                  required>
+                <input class="filter__contacts-input-email" type="email" id="email-field" name="e-mail"
+                  placeholder="kuklachev@gmail.com" required>
+                <svg class="filter__contacts-icon-email" width="20" height="14" viewbox="0 0 20 14">
+                  <use xlink:href="img/sprite.svg#icon_email"></use>
+                </svg>
               </li>
               <li class="filter__contacts-item">
                 <label class="filter__contacts-label" for="phone-field">Телефон:* </label>
-                <input class="filter__contacts-tel" type="tel" id="phone-field" placeholder="8 (960) 900-60-90"
+                <input class="filter__contacts-input-phone" type="tel" id="phone-field" name="phone" placeholder="8 (960) 900-60-90"
                   required>
+                <svg class="filter__contacts-icon-phone" width="20" height="20" viewbox="0 0 20 20">
+                  <use xlink:href="img/sprite.svg#icon_phone"></use>
+                </svg>
               </li>
             </ul>
           </fieldset>
+
           <fieldset class="filter__comment">
             <h2 class="filter__comment-legend">Комментарий</h2>
             <div class="filter__comment-wrapper">
@@ -114,39 +124,42 @@
                 placeholder="Расскажите обо всех повадках кота"></textarea>
             </div>
           </fieldset>
+
           <fieldset class="filter__extra">
             <h2 class="filter__extra-legend">Дополнительно</h2>
             <ul class="filter__extra-list">
               <li class="filter__extra-item filter__extra-checkbox">
-                <input class="filter__extra-input visually-hidden" id="sweetener-field" type="checkbox" checked>
+                <input class="filter__extra-input visually-hidden" id="sweetener-field" name="sweetener" type="checkbox" checked>
                 <label class="filter__extra-label filter__extra-label--active"
                   for="sweetener-field">Cахарозаменитель</label>
               </li>
               <li class="filter__extra-item filter__extra-checkbox">
-                <input class="filter__extra-input visually-hidden" id="water-field" type="checkbox">
+                <input class="filter__extra-input visually-hidden" id="water-field" name="water" type="checkbox">
                 <label class="filter__extra-label" for="water-field">Питьевая вода</label>
               </li>
               <li class="filter__extra-item filter__extra-checkbox">
-                <input class="filter__extra-input visually-hidden" id="milk-field" type="checkbox">
+                <input class="filter__extra-input visually-hidden" id="milk-field" name="milk" type="checkbox">
                 <label class="filter__extra-label" for="milk-field">Молоко</label>
               </li>
               <li class="filter__extra-item filter__extra-checkbox">
-                <input class="filter__add-input visually-hidden" id="vitamins-field" type="checkbox">
+                <input class="filter__extra-input visually-hidden" id="vitamins-field" name="vitamins" type="checkbox">
                 <label class="filter__extra-label" for="vitamins-field">Витамины</label>
               </li>
             </ul>
           </fieldset>
-          <div class="button-wrapper">
-            <button class="button__global" type="submit">Отправить заявку</button>
+
+          <div class="filter__extra-button">
+            <button class="button-global" type="submit">Отправить заявку</button>
           </div>
           <p class="form__request-legend">* — Обязательные поля</p>
         </form>
       </div>
     </section>
   </main>
+
   <footer class="page-footer">
     <section class="invitation">
-      <div class="invitation__wrapper">
+      <div class="invitation__wrapper--grey">
         <h2 class="invitation__title">Приглашаем<br><span class="invitation__title-second">к сотрудничеству</span>
           <span class="invitation__title-diler">дилеров!</span>
         </h2>
@@ -162,32 +175,38 @@
         </svg>
       </a>
       <div class="page-footer__social social">
-        <a class="social__link social__link--vkontakte visually-hidden" href="https://vk.com/htmlacademy">Мы в
-          Вконтакте</a>
-        <svg class="social-vkontakte" width="23" height="16" viewbox="0 0 23 16">
-          <use href="img/sprite.svg#icon_vkontakte"></use>
-        </svg>
-        <a class="social__link social__link--instagram visually-hidden" href="https://vk.com/htmlacademy">Мы в
-          Инстаграме</a>
-        <svg class="social-instagram" width="16" height="16" viewbox="0 0 16 16">
-          <use href="img/sprite.svg#icon_instagram"></use>
-        </svg>
-        <a class="social__link social__link--facebook visually-hidden" href="https://vk.com/htmlacademy">Мы в
-          Фейсбуке</a>
-        <svg class="social-facebook" width="22" height="22" viewbox="0 0 22 22">
-          <use href="#icon_facebook"></use>
-        </svg>
+        <a class="social__link social__link--vkontakte" href="https://vk.com/htmlacademy" target="_blank">
+          <svg class="social__vkontakte" width="23" height="16" viewbox="0 0 23 16">
+            <use xlink:href="img/sprite.svg#icon_vkontakte"></use>
+          </svg>
+          <span class="visually-hidden">Мы в Вконтакте</span>
+        </a>
+
+        <a class="social__link social__link--instagram" href="https://instagram.com/htmlacademy" target="_blank">
+          <svg class="social__instagram" width="23" height="16" viewbox="0 0 23 16">
+            <use xlink:href="img/sprite.svg#icon_instagram"></use>
+          </svg>
+          <span class="visually-hidden">Мы в Инстаграме</span>
+        </a>
+
+        <a class="social__link social__link--facebook" href="https://facebook.com/htmlacademy" target="_blank">
+          <svg class="social__facebook" width="22" height="22" viewbox="0 0 22 22">
+            <use xlink:href="#icon_facebook"></use>
+          </svg>
+          <span class="visually-hidden">Мы в Фейсбуке</span>
+        </a>
+
       </div>
-      <a class="page-footer__copyright" href="https://htmlacademy.ru/intensive/adaptive" target="_blank">
-        <span class="copyright__text">HTML Academy</span>
-        <svg class="copyright__logo" width="27" height="34" viewbox="0 0 27 34">
+      <a class="page-footer__copyright" href="https://htmlacademy.ru/intensive/adaptive" target="_blank" aria-label="Переход на сайт HTML Academy">
+        <span class="page-footer__copyright-text">HTML Academy</span>
+        <svg class="page-footer__copyright-logo" width="27" height="34" viewbox="0 0 27 34">
           <use href="img/sprite.svg#logo-academy"></use>
         </svg>
       </a>
     </div>
   </footer>
 
-  <script async src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=8b218d93-82f5-460e-b613-21e5495d6f21"></script>
+  <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=8b218d93-82f5-460e-b613-21e5495d6f21"></script>
   <script src="js/script.min.js"></script>
 </body>
 

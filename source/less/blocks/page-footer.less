@@ -1,0 +1,138 @@
+.page-footer__wrapper {
+  padding-top: 41px;
+  padding-left: 20px;
+  padding-right: 20px;
+  background-color: @basic_grey;
+
+  @media (min-width: @tablet-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding-top: 43px;
+    padding-bottom: 30px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 44px;
+    padding-left: 110px;
+    padding-bottom: 30px;
+    padding-right: 110px;
+  }
+}
+
+.page-footer__logo-name {
+  display: block;
+  text-align: center;
+  padding-bottom: 27px;
+  border-bottom: 1px solid @border_line;
+
+  &:hover {
+    opacity: 0.7;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
+  @media (min-width: @tablet-width) {
+    margin-top: 21px;
+    margin-left: 10px;
+    text-align: left;
+    border: none;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 128px;
+    height: 24px;
+    margin-top: 20px;
+    margin-left: 0;
+    border: none;
+  }
+}
+
+.page-footer__social {
+  display: flex;
+  margin-top: 21px;
+  width: 130px;
+  margin-bottom: -4px;
+  margin-left: auto;
+  margin-right: auto;
+  justify-content: space-between;
+  align-items: center;
+
+  @media (min-width: @tablet-width) {
+    margin-top: -16px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-left: 10px;
+  }
+}
+
+.page-footer__copyright {
+  display: flex;
+  margin-top: 20px;
+  padding-top: 30px;
+  padding-bottom: 22px;
+  border-top: 1px solid @border_line;
+  text-decoration: none;
+  justify-content: space-between;
+
+  @media (min-width: @tablet-width) {
+    margin-top: -3px;
+    border-top: none;
+    padding-right: 10px;
+    justify-self: right;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-top: -5px;
+    padding-right: 2px;
+    padding-left: 2px;
+  }
+}
+
+.page-footer__copyright-text {
+  font-size: 16px;
+  line-height: 18px;
+  font-family: @font_secondary;
+  margin-left: -1px;
+  color: @special_dark-grey;
+
+  @media (min-width: @tablet-width) {
+    margin-top: -5px;
+    margin-right: 22px;
+
+    &:active {
+      color: @special_dark-grey;
+      opacity: 0.3;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-top: -1px;
+  }
+}
+
+.page-footer__copyright:hover .page-footer__copyright-logo {
+  color: @basic_green;
+}
+
+.page-footer__copyright-logo {
+  margin-top: -8px;
+  color: @special_grey-2;
+
+  @media (min-width: @tablet-width) {
+    margin-top: -12px;
+    margin-right: 2px;
+
+    &:active {
+      color: @basic_green;
+      opacity: 0.3;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-top: -8px;
+    margin-right: -1px;
+  }
+}

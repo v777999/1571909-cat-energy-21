@@ -3,7 +3,7 @@
   padding: 0;
   min-width: 320px;
   height: 100%;
-  font-family: "Oswald", sans-serif;
+  font-family: @font_primary;
   font-size: 14px;
   line-height: 18px;
   background-color: transparent;
@@ -14,101 +14,5 @@
 
   @media (min-width: @desktop-width) {
     min-width: 1440px;
-  }
-}
-
-.page-main {
-  margin: 0;
-  padding: 0;
-}
-
-.page__body {
-  display: grid;
-  grid-template-rows: min-content 1fr min-content;
-  align-content: start;
-  width: 100%;
-  min-height: 100%;
-  margin: 0;
-  color: @special_dark-grey;
-  background-color: transparent;
-  //background-color: @basic_white;
-}
-
-.page-header {
-  display: flex;
-  flex-direction: column;
-  padding: 0;
-  //background-color: @basic_white;
-  color: @basic_black;
-  text-align: center;
-
-  @media (max-width: @mobile-width-only) {
-    padding: 0;
-  }
-
-  @media (min-width: @tablet-width) {
-    padding: 0 30px;
-  }
-
-  @media (min-width: @desktop-width) {
-    padding: 0 109px 0 110px;
-    background-color: transparent;
-    box-sizing: border-box;
-  }
-}
-
-.page-header__wrapper {
-  position: relative;
-  height: 68px;
-  text-align: center;
-
-  @media (max-width: @mobile-width-only) {
-    padding: 0 0 0 20px;
-    justify-content: space-between;
-  }
-
-  @media (min-width: @tablet-width) {
-    padding: 0 30px;
-    justify-content: space-between;
-  }
-
-  @media (min-width: @desktop-width) {
-    min-height: 165px;
-    padding-top: 73px;
-    padding-bottom: 53px;
-  }
-}
-
-.page-header__logo {
-  @media (min-width: @tablet-width) {
-    position: absolute;
-    display: block;
-    width: 175px;
-    height: 52px;
-    padding-top: 24px;
-    left: 0;
-  }
-
-  @media (min-width: @desktop-width) {
-    position: absolute;
-    display: block;
-    padding-top: 54px;
-    left: 0;
-    width: 202px;
-    height: 59px;
-  }
-}
-
-.mobile-logo::before {
-  @media (max-width: @mobile-width-only) {
-    position: absolute;
-    content: "";
-    left: 20px;
-    margin-top: -12px;
-    background-image: url("../img/logo-mobile.svg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    width: 33px;
-    height: 37px;
   }
 }

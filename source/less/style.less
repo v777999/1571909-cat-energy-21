@@ -4,16 +4,18 @@
 @desktop-width: 1440px;
 @mobile-width-only: 767px;
 
-// Fonts
+// Globals
 
-@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@400;500&display=swap");
+@import "global/fonts.less";
+@import "node_modules/normalize.less/normalize.less";
 @import "global/variables.less";
 @import "global/global.less";
-@import "global/fonts.less";
 
 // Blocks
 
 @import "blocks/page.less";
+@import "blocks/page-main.less";
+@import "blocks/page-header.less";
 @import "blocks/main-nav.less";
 @import "blocks/site-list.less";
 @import "blocks/button.less";
@@ -22,6 +24,11 @@
 @import "blocks/advantages.less";
 @import "blocks/example.less";
 @import "blocks/invitation.less";
-@import "blocks/footer.less";
+@import "blocks/page-footer.less";
 @import "blocks/form.less";
-@import "blocks/catalog-page.less";
+@import "blocks/filter.less";
+@import "blocks/social.less";
+@import "blocks/catalog.less";
+@import "blocks/product-data.less";
+@import "blocks/additional-goods.less";
+@import "blocks/show-all.less";

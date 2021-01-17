@@ -12,7 +12,7 @@
   <link rel="stylesheet" href="css/style.min.css">
 </head>
 
-<body class="page__body">
+<body class="body">
   <svg style="display: none">
     <symbol id="icon_facebook" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
       <path
@@ -61,11 +61,13 @@
               <ul class="filter__client-list">
                 <li class="filter__client-item">
                   <label class="filter__client-label" for="client-name">Имя:*</label>
-                  <input class="filter__client-input" id="client-name" name="client-name" type="text" placeholder="Барсик" required>
+                  <input class="filter__client-input" id="client-name" name="client-name" type="text"
+                    placeholder="Барсик" required>
                 </li>
                 <li class="filter__client-item">
                   <label class="filter__client-label" for="client-weight">Вес (кг):*</label>
-                  <input class="filter__client-input" id="client-weight" name="client-weight" type="text" placeholder="7" required>
+                  <input class="filter__client-input" id="client-weight" name="client-weight" type="text"
+                    placeholder="7" required>
                 </li>
                 <li class="filter__client-item">
                   <label class="filter__client-label" for="client-age">Возраст (лет):</label>
@@ -82,76 +84,75 @@
                   <label class="filter__target-label filter__target-label--active" for="slim-target">Похудение</label>
                 </li>
                 <li class="filter__target-item filter__radio">
-                  <input class="filter__target-input visually-hidden" type="radio" name="target"
-                    id="weight-target">
+                  <input class="filter__target-input visually-hidden" type="radio" name="target" id="weight-target">
                   <label class="filter__target-label" for="weight-target">Набор массы</label>
                 </li>
                 <li class="filter__target-item filter__radio">
-                  <input class="filter__target-input visually-hidden" type="radio" name="target"
-                    id="need-advice">
+                  <input class="filter__target-input visually-hidden" type="radio" name="target" id="need-advice">
                   <label class="filter__target-label" for="need-advice">Не знаю (Нужен ваш совет)</label>
                 </li>
               </ul>
             </fieldset>
           </div>
 
-          <fieldset class="filter__contacts">
-            <h2 class="filter__contacts-legend">Контактные данные <br>(владельца кота)</h2>
-            <ul class="filter__contacts-list">
-              <li class="filter__contacts-item">
-                <label class="filter__contacts-label filter__contacts-label--active" for="email-field">E-mail:*</label>
-                <input class="filter__contacts-input-email" type="email" id="email-field" name="e-mail"
+          <fieldset class="filter-contacts">
+            <h2 class="filter-contacts-legend">Контактные данные <br>(владельца кота)</h2>
+            <ul class="filter-contacts-list">
+              <li class="filter-contacts-item">
+                <label class="filter-contacts-label filter-contacts-label--active" for="email-field">E-mail:*</label>
+                <input class="filter-contacts-input-email" type="email" id="email-field" name="e-mail"
                   placeholder="kuklachev@gmail.com" required>
-                <svg class="filter__contacts-icon-email" width="20" height="14" viewbox="0 0 20 14">
+                <svg class="filter-contacts-icon-email" width="20" height="14" viewbox="0 0 20 14">
                   <use xlink:href="img/sprite.svg#icon_email"></use>
                 </svg>
               </li>
-              <li class="filter__contacts-item">
-                <label class="filter__contacts-label" for="phone-field">Телефон:* </label>
-                <input class="filter__contacts-input-phone" type="tel" id="phone-field" name="phone" placeholder="8 (960) 900-60-90"
-                  required>
-                <svg class="filter__contacts-icon-phone" width="20" height="20" viewbox="0 0 20 20">
+              <li class="filter-contacts-item">
+                <label class="filter-contacts-label" for="phone-field">Телефон:* </label>
+                <input class="filter-contacts-input-phone" type="tel" id="phone-field" name="phone"
+                  placeholder="8 (960) 900-60-90" required>
+                <svg class="filter-contacts-icon-phone" width="20" height="20" viewbox="0 0 20 20">
                   <use xlink:href="img/sprite.svg#icon_phone"></use>
                 </svg>
               </li>
             </ul>
           </fieldset>
 
-          <fieldset class="filter__comment">
-            <h2 class="filter__comment-legend">Комментарий</h2>
-            <div class="filter__comment-wrapper">
-              <textarea class="filter__comment-text" name="comment" id="comment-field" rows="5"
+          <fieldset class="filter-comment">
+            <h2 class="filter-comment-legend">Комментарий</h2>
+            <div class="filter-comment-wrapper">
+              <textarea class="filter-comment-text" name="comment" id="comment-field" rows="5"
                 placeholder="Расскажите обо всех повадках кота"></textarea>
             </div>
           </fieldset>
 
-          <fieldset class="filter__extra">
-            <h2 class="filter__extra-legend">Дополнительно</h2>
-            <ul class="filter__extra-list">
-              <li class="filter__extra-item filter__extra-checkbox">
-                <input class="filter__extra-input visually-hidden" id="sweetener-field" name="sweetener" type="checkbox" checked>
-                <label class="filter__extra-label filter__extra-label--active"
+          <fieldset class="filter-extra">
+            <h2 class="filter-extra-legend">Дополнительно</h2>
+            <ul class="filter-extra-list">
+              <li class="filter-extra-item filter-extra-checkbox">
+                <input class="filter-extra-input visually-hidden" id="sweetener-field" name="sweetener" type="checkbox"
+                  checked>
+                <label class="filter-extra-label filter-extra-label--active"
                   for="sweetener-field">Cахарозаменитель</label>
               </li>
-              <li class="filter__extra-item filter__extra-checkbox">
-                <input class="filter__extra-input visually-hidden" id="water-field" name="water" type="checkbox">
-                <label class="filter__extra-label" for="water-field">Питьевая вода</label>
+              <li class="filter-extra-item filter-extra-checkbox">
+                <input class="filter-extra-input visually-hidden" id="water-field" name="water" type="checkbox">
+                <label class="filter-extra-label" for="water-field">Питьевая вода</label>
               </li>
-              <li class="filter__extra-item filter__extra-checkbox">
-                <input class="filter__extra-input visually-hidden" id="milk-field" name="milk" type="checkbox">
-                <label class="filter__extra-label" for="milk-field">Молоко</label>
+              <li class="filter-extra-item filter-extra-checkbox">
+                <input class="filter-extra-input visually-hidden" id="milk-field" name="milk" type="checkbox">
+                <label class="filter-extra-label" for="milk-field">Молоко</label>
               </li>
-              <li class="filter__extra-item filter__extra-checkbox">
-                <input class="filter__extra-input visually-hidden" id="vitamins-field" name="vitamins" type="checkbox">
-                <label class="filter__extra-label" for="vitamins-field">Витамины</label>
+              <li class="filter-extra-item filter-extra-checkbox">
+                <input class="filter-extra-input visually-hidden" id="vitamins-field" name="vitamins" type="checkbox">
+                <label class="filter-extra-label" for="vitamins-field">Витамины</label>
               </li>
             </ul>
           </fieldset>
 
-          <div class="filter__extra-button">
+          <div class="filter-extra-button">
             <button class="button-global" type="submit">Отправить заявку</button>
           </div>
-          <p class="form__request-legend">* — Обязательные поля</p>
+          <p class="form-request-legend">* — Обязательные поля</p>
         </form>
       </div>
     </section>
@@ -159,7 +160,7 @@
 
   <footer class="page-footer">
     <section class="invitation">
-      <div class="invitation__wrapper--grey">
+      <div class="invitation__wrapper invitation__wrapper--grey">
         <h2 class="invitation__title">Приглашаем<br><span class="invitation__title-second">к сотрудничеству</span>
           <span class="invitation__title-diler">дилеров!</span>
         </h2>
@@ -197,7 +198,8 @@
         </a>
 
       </div>
-      <a class="page-footer__copyright" href="https://htmlacademy.ru/intensive/adaptive" target="_blank" aria-label="Переход на сайт HTML Academy">
+      <a class="page-footer__copyright" href="https://htmlacademy.ru/intensive/adaptive" target="_blank"
+        aria-label="Переход на сайт HTML Academy">
         <span class="page-footer__copyright-text">HTML Academy</span>
         <svg class="page-footer__copyright-logo" width="27" height="34" viewbox="0 0 27 34">
           <use href="img/sprite.svg#logo-academy"></use>

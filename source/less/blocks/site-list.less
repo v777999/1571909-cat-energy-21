@@ -36,7 +36,7 @@
       margin-left: 38px;
     }
 
-    &--active {
+    &-active {
       position: relative;
 
       &::after {
@@ -65,7 +65,7 @@
       margin-left: 1px;
     }
 
-    &--active {
+    &-active {
       position: relative;
 
       &::after {
@@ -82,7 +82,7 @@
   }
 }
 
-.site-list__item-index {
+.site-list__item--index {
   @media (min-width: @tablet-width) {
     &:first-child {
       margin-right: 34px;
@@ -93,7 +93,7 @@
       margin-left: 37px;
     }
 
-    &--active {
+    &-active {
       position: relative;
 
       &::after {
@@ -122,7 +122,7 @@
       margin-left: 1px;
     }
 
-    &--active {
+    &-active {
       position: relative;
 
       &::after {
@@ -190,6 +190,7 @@
 
 .site-list__item:last-child a {
   border-bottom: 1px solid @border_line;
+  text-align: center;
 
   @media (min-width: @tablet-width) {
     border: none;

@@ -16,7 +16,7 @@
   <svg style="display: none">
     <symbol id="icon_facebook" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
       <path
-        d="M16.5 1.833h-2.75a4.63 4.63 0 00-3.24 1.317 4.45 4.45 0 00-1.343 3.177v2.697h-2.75v3.595h2.75v7.191h3.666v-7.19h2.75l.917-3.596h-3.667V6.327a.89.89 0 01.269-.635.926.926 0 01.648-.263h2.75V1.833z"
+        d="M14 .75h-3.5c-1.55 0-3.03.71-4.12 1.97A7.3 7.3 0 004.67 7.5v4.05h-3.5v5.39h3.5V27.7h4.66V16.93h3.5l1.17-5.4H9.33V7.5c0-.36.13-.7.35-.95.21-.26.51-.4.82-.4H14V.75z"
         stroke="currentColor" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round" />
     </symbol>
   </svg>
@@ -175,29 +175,36 @@
           <use href="img/sprite.svg#footer-logo"></use>
         </svg>
       </a>
+
       <div class="page-footer__social social">
-        <a class="social__link social__link--vkontakte" href="https://vk.com/htmlacademy" target="_blank">
-          <svg class="social__vkontakte" width="23" height="16" viewbox="0 0 23 16">
-            <use xlink:href="img/sprite.svg#icon_vkontakte"></use>
-          </svg>
-          <span class="visually-hidden">Мы в Вконтакте</span>
-        </a>
-
-        <a class="social__link social__link--instagram" href="https://instagram.com/htmlacademy" target="_blank">
-          <svg class="social__instagram" width="23" height="16" viewbox="0 0 23 16">
-            <use xlink:href="img/sprite.svg#icon_instagram"></use>
-          </svg>
-          <span class="visually-hidden">Мы в Инстаграме</span>
-        </a>
-
-        <a class="social__link social__link--facebook" href="https://facebook.com/htmlacademy" target="_blank">
-          <svg class="social__facebook" width="22" height="22" viewbox="0 0 22 22">
-            <use xlink:href="#icon_facebook"></use>
-          </svg>
-          <span class="visually-hidden">Мы в Фейсбуке</span>
-        </a>
-
+        <ul class="social__list">
+          <li class="social__item">
+            <a class="social__link social__link--vkontakte" href="https://vk.com/htmlacademy" target="_blank">
+              <svg class="social__vkontakte" width="23" height="16" viewbox="0 0 23 16">
+                <use xlink:href="img/sprite.svg#icon_vkontakte"></use>
+              </svg>
+              <span class="visually-hidden">Мы в Вконтакте</span>
+            </a>
+          </li>
+          <li class="social__item">
+            <a class="social__link social__link--instagram" href="https://instagram.com/htmlacademy" target="_blank">
+              <svg class="social__instagram" width="23" height="16" viewbox="0 0 23 16">
+                <use xlink:href="img/sprite.svg#icon_instagram"></use>
+              </svg>
+              <span class="visually-hidden">Мы в Инстаграме</span>
+            </a>
+          </li>
+          <li class="social__item">
+            <a class="social__link social__link--facebook" href="https://facebook.com/htmlacademy" target="_blank">
+              <svg class="social__facebook" width="15" height="29" viewbox="0 0 15 29">
+                <use xlink:href="#icon_facebook"></use>
+              </svg>
+              <span class="visually-hidden">Мы в Фейсбуке</span>
+            </a>
+          </li>
+        </ul>
       </div>
+
       <a class="page-footer__copyright" href="https://htmlacademy.ru/intensive/adaptive" target="_blank"
         aria-label="Переход на сайт HTML Academy">
         <span class="page-footer__copyright-text">HTML Academy</span>

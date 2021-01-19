@@ -75,19 +75,19 @@
 .programs__item {
   position: relative;
   margin-bottom: 20px;
-  padding: 5px 20px 39px 20px;
+  padding: 5px 20px 20px 20px;
   background-color: @basic_grey;
 
   @media (min-width: @tablet-width) {
     padding-top: 77px;
     padding-right: 28px;
-    padding-bottom: 98px;
+    padding-bottom: 56px;
     margin-bottom: 30px;
   }
 
   @media (min-width: @desktop-width) {
     padding-right: 51px;
-    padding-bottom: 92px;
+    padding-bottom: 58px;
   }
 
   &::after {
@@ -99,10 +99,10 @@
 }
 
 .programs__description {
-  position: relative;
+  /* position: relative; */
   padding-bottom: 22px;
   margin-top: -1px;
-  margin-bottom: 18px;
+  margin-bottom: 20px;
   font-family: @font_secondary;
   font-size: 14px;
   line-height: 18px;
@@ -114,6 +114,7 @@
     line-height: 24px;
     margin-left: 32px;
     padding-top: 3px;
+    margin-bottom: 30px;
     border: none;
     width: 377px;
   }
@@ -123,19 +124,20 @@
     padding-right: 0;
     margin-left: 32px;
     margin-top: 71px;
+    margin-bottom: 4px;
     width: auto;
   }
 }
 
 .programs__item-button {
-  position: absolute;
+  /* position: absolute; */
   font-size: 16px;
   line-height: 16px;
   font-weight: 400;
   color: @basic_black;
   text-decoration: none;
   text-transform: uppercase;
-  margin-top: 2px;
+  /* margin-top: -2px; */
 
   &:active {
     opacity: 0.3;
@@ -151,7 +153,7 @@
 
   @media (min-width: @desktop-width) {
     margin-left: 32px;
-    margin-top: 4px;
+    /* margin-top: 4px; */
   }
 }
 
@@ -159,14 +161,13 @@
   content: "";
   position: absolute;
   margin-left: 16px;
-
   width: 24px;
   height: 12px;
   background-image: url("data:image/svg+xml,%3Csvg width='24' height='12' viewBox='0 0 24 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cline y1='6' x2='18' y2='6' stroke='black' stroke-width='2'/%3E%3Cpath d='M24 6L17.25 11.1962L17.25 0.803848L24 6Z' fill='black'/%3E%3C/svg%3E%0A");
 
   @media (min-width: @tablet-width) {
-    margin-top: 7px;
-    margin-left: 25px;
+    margin-top: 8px;
+    margin-left: 24px;
   }
 
   @media (min-width: @desktop-width) {
